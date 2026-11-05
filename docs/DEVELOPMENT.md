@@ -57,7 +57,7 @@ flutter test test/startup_test.dart test/app_lock_gate_test.dart test/account_sw
 
 ## 服务端要求
 
-客户端基础功能要求 Gemsnote API2 v1.0.0，1.1.0 服务端另支持笔记本创建幂等和图片上传回执/安全清理。登录接口 `/api2/auth/login` 一次返回 token、用户资料和服务端版本，缓存记录该版本以决定是否启用增强；旧 `/api` 与旧 Leanote 服务端不在支持范围内。
+客户端要求 Gemsnote API2 v1.1.0。登录接口 `/api2/auth/login` 一次返回 token、用户资料和服务端版本，缓存记录该版本；旧 `/api` 与旧 Leanote 服务端不在支持范围内。
 
 首次登录按 USN 分页下载笔记本、含正文笔记和标签，并在单个 SQLite 事务中替换该账号快照。默认在完整快照成功落库后保存登录状态。用户主动取消首次下载时保留已验证的登录状态，建立空缓存；取消已有账号的重新同步则保留原缓存。两者都会暂停自动同步，用户可手动同步或重新启用自动同步。下载失败仍按失败处理，不会提交残缺快照。
 

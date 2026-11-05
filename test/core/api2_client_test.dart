@@ -13,7 +13,7 @@ void main() {
       httpClient: MockClient((request) async {
         expect(request.method, 'POST');
         expect(request.url.path, '/api2/auth/login');
-        expect(request.url.queryParameters['v'], 'mobile_1.0.0');
+        expect(request.url.queryParameters['v'], 'mobile_1.1.0');
         expect(jsonDecode(request.body), {'email': 'admin', 'pwd': 'secret'});
         return http.Response(
           jsonEncode({

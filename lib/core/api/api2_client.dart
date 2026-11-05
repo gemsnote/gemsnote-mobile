@@ -42,7 +42,8 @@ class Api2Client {
     this.noteContentTimeout = const Duration(minutes: 5),
   }) : _http = httpClient ?? http.Client();
 
-  static const clientVersion = '1.0.0';
+  static const clientVersion = '1.1.0';
+  static const requiredApiVersion = '1.1.0';
   static const syncNotePageSize = 10;
   final http.Client _http;
   final Duration requestTimeout;

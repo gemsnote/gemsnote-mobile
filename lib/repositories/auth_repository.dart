@@ -2627,7 +2627,8 @@ class AuthRepository {
         0) {
       throw const ApiException('clientUpgradeRequired');
     }
-    if (_compareVersions(result.serverVersion, Api2Client.clientVersion) < 0) {
+    if (_compareVersions(result.serverVersion, Api2Client.requiredApiVersion) <
+        0) {
       throw const ApiException('serverUpgradeRequired');
     }
   }

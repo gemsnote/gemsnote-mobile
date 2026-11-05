@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gemsnote/core/api/api2_client.dart';
+import 'package:gemsnote/core/api/api_exception.dart';
 import 'package:gemsnote/data/database/app_database.dart';
 import 'package:gemsnote/domain/models/account.dart';
 import 'package:gemsnote/repositories/auth_repository.dart';
@@ -17,6 +18,46 @@ void main() {
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
   });
+  test('login rejects a server older than the required API2 version', () async {
+    final db = await AppDatabase.open(databasePath: inMemoryDatabasePath);
+    addTearDown(db.raw.close);
+    final sessions = MemorySessions();
+    final api = Api2Client(
+      httpClient: MockClient(
+        (_) async => http.Response(
+          jsonEncode({
+            'Ok': true,
+            'Token': 'old-server-token',
+            'User': {'UserId': 'u', 'Username': 'admin'},
+            'Server': {
+              'Name': 'gemsnote',
+              'Version': '1.0.0',
+              'MinVersion': '',
+            },
+          }),
+          200,
+        ),
+      ),
+    );
+    final repo = AuthRepository(api, db, sessions, SyncCoordinator(api, db));
+
+    await expectLater(
+      repo.beginLogin(
+        serverAddress: 'https://notes.example.test/',
+        identity: 'admin',
+        password: 'test-password',
+      ),
+      throwsA(
+        isA<ApiException>().having(
+          (error) => error.code,
+          'code',
+          'serverUpgradeRequired',
+        ),
+      ),
+    );
+    expect(sessions.values, isEmpty);
+  });
+
   for (final cached in [false, true]) {
     for (final failed in [false, true]) {
       test('two-stage login cached=$cached downloadFailure=$failed', () async {
@@ -57,7 +98,7 @@ void main() {
                   'User': {'UserId': 'u', 'Username': 'renamed'},
                   'Server': {
                     'Name': 'gemsnote',
-                    'Version': '1.0.0',
+                    'Version': '1.1.0',
                     'MinVersion': '',
                   },
                 }),

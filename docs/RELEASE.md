@@ -17,8 +17,8 @@ iOS 正式签名和发布尚未实现，不发布模拟器包冒充 IPA。
 
 ## 版本与产物
 
-版本在 `pubspec.yaml` 的 `version: 1.0.0+1` 维护：tag 对应 `1.0.0`，
-`+1` 是安装包构建号。发布时递增构建号；tag 必须指向包含对应版本配置的提交。
+版本在 `pubspec.yaml` 的 `version: 1.1.0+2` 维护：tag 对应 `1.1.0`，
+`+2` 是安装包构建号。发布时递增构建号；tag 必须指向包含对应版本配置的提交。
 工作流先严格校验 tag，再运行全量测试，然后用 Java 17 构建签名 Release：
 
 - `gemsnote-<version>-android.apk`：Android 安装包。

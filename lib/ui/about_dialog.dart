@@ -72,7 +72,7 @@ class _MobileAboutDialogState extends State<MobileAboutDialog> {
               );
             },
           ),
-          Text(tr(context, 'm0008', [Api2Client.clientVersion])),
+          Text(tr(context, 'm0008', [Api2Client.requiredApiVersion])),
         ],
       ),
     ),
