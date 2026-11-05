@@ -1,0 +1,3743 @@
+{
+  "startupLoading": {
+    "zh": "正在启动…",
+    "en": "Starting…"
+  },
+  "startupFailed": {
+    "zh": "无法初始化应用，请重试。不会清除本地数据。",
+    "en": "Could not initialize the app. Retry without clearing local data."
+  },
+  "startupSessionFailed": {
+    "zh": "无法读取本地登录状态，请重试。",
+    "en": "Could not read the saved session. Please retry."
+  },
+  "m0001": {
+    "zh": "未知",
+    "en": "Unknown"
+  },
+  "m0002": {
+    "zh": "关于珠玑笔记",
+    "en": "About Gemsnote"
+  },
+  "m0003": {
+    "zh": "日积字句，终得珠玑。",
+    "en": "Collect your words, discover your gems."
+  },
+  "m0004": {
+    "zh": "正在读取应用版本…",
+    "en": "Loading app version…"
+  },
+  "m0005": {
+    "zh": "无法读取应用版本，请重试。",
+    "en": "Could not load the app version. Please retry."
+  },
+  "m0006": {
+    "zh": "重试",
+    "en": "Retry"
+  },
+  "m0007": {
+    "zh": "应用版本：{0}\n构建号：{1}",
+    "en": "App version: {0}\nBuild: {1}"
+  },
+  "m0008": {
+    "zh": "API2 协议版本：{0}",
+    "en": "API2 protocol version: {0}"
+  },
+  "m0009": {
+    "zh": "基于 Leanote Android 重构，使用 Flutter 构建，支持本地 SQLite 离线缓存。",
+    "en": "Rebuilt from Leanote Android with Flutter and a local SQLite cache for offline use."
+  },
+  "m0010": {
+    "zh": "关闭",
+    "en": "Close"
+  },
+  "m0011": {
+    "zh": "用户头像",
+    "en": "Profile picture"
+  },
+  "m0012": {
+    "zh": "请填写全部字段",
+    "en": "Please fill in all fields"
+  },
+  "m0013": {
+    "zh": "请输入有效的邮箱地址",
+    "en": "Enter a valid email address"
+  },
+  "m0014": {
+    "zh": "发送失败，请检查网络、当前账号密码及邮箱。若请求超时，请先检查收件箱，勿重复发送。",
+    "en": "Could not send the email. Check your connection, current password and email address. If the request timed out, check your inbox before sending again."
+  },
+  "m0015": {
+    "zh": "修改失败，请检查网络、当前账号密码或用户名是否可用。若请求超时，请先刷新资料确认结果。",
+    "en": "Could not update your profile. Check your connection, current password and username availability. If the request timed out, refresh your profile to check the result."
+  },
+  "m0016": {
+    "zh": "修改邮箱",
+    "en": "Change email"
+  },
+  "m0017": {
+    "zh": "修改用户名",
+    "en": "Change username"
+  },
+  "m0018": {
+    "zh": "需要联网验证当前账号。密码仅用于本次操作，不会保存。",
+    "en": "An internet connection is required to verify your account. Your password is used only for this operation and will not be saved."
+  },
+  "m0019": {
+    "zh": "发送验证邮件后，需在新邮箱中点击链接确认，邮箱才会变更。",
+    "en": "After sending the verification email, follow the link in your new inbox to confirm the change."
+  },
+  "m0020": {
+    "zh": "当前登录账号（用户名或邮箱）",
+    "en": "Current account (username or email)"
+  },
+  "m0021": {
+    "zh": "当前密码",
+    "en": "Current password"
+  },
+  "m0022": {
+    "zh": "新邮箱",
+    "en": "New email"
+  },
+  "m0023": {
+    "zh": "新用户名",
+    "en": "New username"
+  },
+  "m0024": {
+    "zh": "发送验证邮件",
+    "en": "Send verification email"
+  },
+  "m0025": {
+    "zh": "保存",
+    "en": "Save"
+  },
+  "m0026": {
+    "zh": "取消",
+    "en": "Cancel"
+  },
+  "m0027": {
+    "zh": "头像已上传，正在刷新",
+    "en": "Profile picture uploaded. Refreshing…"
+  },
+  "m0028": {
+    "zh": "无法读取头像：{0}。文件需不超过 2 MiB、4096×4096，支持 PNG/JPEG/WebP/GIF/BMP。",
+    "en": "Could not read the picture: {0}. Use a PNG, JPEG, WebP, GIF or BMP file up to 2 MiB and 4096×4096 pixels."
+  },
+  "m0029": {
+    "zh": "密码已修改，但本机登录状态清理失败，请重试。不会再次修改密码。",
+    "en": "Your password changed, but this device could not clear the login session. Please retry. Your password will not be changed again."
+  },
+  "m0030": {
+    "zh": "读取本地账号信息失败：{0}",
+    "en": "Could not read local account information: {0}"
+  },
+  "m0031": {
+    "zh": "资料已刷新，但头像刷新失败，保留原头像：{0}",
+    "en": "Profile refreshed, but the picture could not be refreshed. Keeping the previous picture: {0}"
+  },
+  "m0032": {
+    "zh": "刷新失败，仍显示本地资料：{0}",
+    "en": "Could not refresh. Showing the local profile: {0}"
+  },
+  "m0033": {
+    "zh": "未设置",
+    "en": "Not set"
+  },
+  "m0034": {
+    "zh": "账号",
+    "en": "Account"
+  },
+  "m0035": {
+    "zh": "刷新资料",
+    "en": "Refresh profile"
+  },
+  "m0036": {
+    "zh": "密码已修改，本地笔记已保留。",
+    "en": "Password changed. Your local notes have been kept."
+  },
+  "m0037": {
+    "zh": "返回登录",
+    "en": "Return to sign in"
+  },
+  "m0038": {
+    "zh": "更换头像",
+    "en": "Change picture"
+  },
+  "m0039": {
+    "zh": "拍照设置头像",
+    "en": "Take profile picture"
+  },
+  "m0040": {
+    "zh": "服务器地址",
+    "en": "Server address"
+  },
+  "m0041": {
+    "zh": "用户名",
+    "en": "Username"
+  },
+  "m0042": {
+    "zh": "用户名已更新",
+    "en": "Username updated"
+  },
+  "m0043": {
+    "zh": "邮箱",
+    "en": "Email"
+  },
+  "m0044": {
+    "zh": "验证邮件已发送，请在新邮箱确认后刷新资料。当前邮箱尚未修改。",
+    "en": "Verification email sent. Confirm in your new inbox, then refresh your profile. Your current email has not changed yet."
+  },
+  "m0045": {
+    "zh": "用户 ID",
+    "en": "User ID"
+  },
+  "m0046": {
+    "zh": "修改密码",
+    "en": "Change password"
+  },
+  "m0047": {
+    "zh": "账号信息保存在本地，离线时也可查看。点击右上角刷新可获取服务器上的最新资料。",
+    "en": "Account information is stored locally for offline viewing. Use the refresh button to get the latest profile from your server."
+  },
+  "m0048": {
+    "zh": "读取账号失败，请重试",
+    "en": "Could not read accounts. Please retry."
+  },
+  "m0049": {
+    "zh": "切换失败，请重试；登录失效时请通过添加账号重新登录",
+    "en": "Could not switch accounts. Please retry; if your login has expired, use Add account to sign in again."
+  },
+  "m0050": {
+    "zh": "切换账号",
+    "en": "Switch account"
+  },
+  "m0051": {
+    "zh": "切换保留各账号的离线修改和登录信息，不会自动同步。已退出的账号需要重新登录。",
+    "en": "Switching keeps each account’s offline changes and login information without syncing automatically. Sign in again to access accounts you have signed out of."
+  },
+  "m0052": {
+    "zh": "重新读取账号",
+    "en": "Reload accounts"
+  },
+  "m0053": {
+    "zh": "当前",
+    "en": "Current"
+  },
+  "m0054": {
+    "zh": "添加账号",
+    "en": "Add account"
+  },
+  "m0055": {
+    "zh": "读取本地附件失败，请重试",
+    "en": "Could not read local attachments. Please retry."
+  },
+  "m0056": {
+    "zh": "确认",
+    "en": "Confirm"
+  },
+  "m0057": {
+    "zh": "移除本地附件？",
+    "en": "Remove local attachment?"
+  },
+  "m0058": {
+    "zh": "将删除“{0}”的暂存原件及任务，不会删除服务端附件。未上传的文件将无法恢复，请先导出保留。",
+    "en": "This deletes the staged original and task for “{0}”, without deleting the server attachment. Files that have not been uploaded cannot be recovered; export a copy first."
+  },
+  "m0059": {
+    "zh": "重新允许上传？",
+    "en": "Allow another upload?"
+  },
+  "m0060": {
+    "zh": "图片可能已经上传，但响应未收到。未关联正文的图片可能不出现在文件列表中；重新上传可能产生多余资源。确认接受后才允许重试，本地原件不会删除。",
+    "en": "The image may have uploaded without a response. Images not linked to a note may be absent from the file list; uploading again may create an extra resource. Confirm to allow a retry. The local original will be kept."
+  },
+  "m0061": {
+    "zh": "先查看服务端文件列表，核实“{0}”没有上传成功。若原请求已成功，再次上传会产生重复附件。",
+    "en": "Check the server file list first to make sure “{0}” was not uploaded. If the original request succeeded, another upload will create a duplicate attachment."
+  },
+  "m0062": {
+    "zh": "操作未完成：{0}。本地原件保留，请刷新核实状态。",
+    "en": "Operation incomplete: {0}. The local original is kept. Refresh to check its status."
+  },
+  "m0063": {
+    "zh": "本地待上传资源",
+    "en": "Local upload queue"
+  },
+  "m0064": {
+    "zh": "刷新本地任务",
+    "en": "Refresh local tasks"
+  },
+  "m0065": {
+    "zh": "原件保存在本机，不会自动上传或随缓存清理。联网后逐项上传；需要当前密码，密码不保存。图片会追加到最新正文末尾并保存，再同步笔记以完成关联。",
+    "en": "Originals are stored on this device, without automatic uploads or cache eviction. Upload each file when online using your current password, which will not be saved. Images are appended to the latest note body; sync the note to finish linking them."
+  },
+  "m0066": {
+    "zh": "暂无暂存附件",
+    "en": "No staged attachments"
+  },
+  "m0067": {
+    "zh": "{0} · {1} 字节\n笔记：{2}",
+    "en": "{0} · {1} bytes\nNote: {2}"
+  },
+  "m0068": {
+    "zh": "附件操作",
+    "en": "Attachment actions"
+  },
+  "m0069": {
+    "zh": "上传并插入图片",
+    "en": "Upload and insert image"
+  },
+  "m0070": {
+    "zh": "上传附件",
+    "en": "Upload attachment"
+  },
+  "m0071": {
+    "zh": "插入到笔记末尾",
+    "en": "Insert at end of note"
+  },
+  "m0072": {
+    "zh": "查看服务端文件列表",
+    "en": "View server files"
+  },
+  "m0073": {
+    "zh": "核实后允许重试",
+    "en": "Allow retry after checking"
+  },
+  "m0074": {
+    "zh": "导出本地原件",
+    "en": "Export local original"
+  },
+  "m0075": {
+    "zh": "移除本地附件",
+    "en": "Remove local attachment"
+  },
+  "m0076": {
+    "zh": "请输入当前账号和密码",
+    "en": "Enter your current account and password"
+  },
+  "m0077": {
+    "zh": "上传未完成或结果未确认：{0}。请关闭窗口并刷新文件列表核实，不要重复上传。",
+    "en": "Upload incomplete or unconfirmed: {0}. Close this window and refresh the file list to check. Do not upload again yet."
+  },
+  "m0078": {
+    "zh": "{0}（{1} 字节）",
+    "en": "{0} ({1} bytes)"
+  },
+  "m0079": {
+    "zh": "将先上传当前笔记的未同步正文，再上传附件；不会同步其他笔记。需要当前密码验证，密码不会保存。",
+    "en": "This uploads the current note’s pending body changes before the attachment, without syncing other notes. Your current password is required for verification and will not be saved."
+  },
+  "m0080": {
+    "zh": "当前账号",
+    "en": "Current account"
+  },
+  "m0081": {
+    "zh": "上传",
+    "en": "Upload"
+  },
+  "m0082": {
+    "zh": "读取图片失败：{0}",
+    "en": "Could not read the image: {0}"
+  },
+  "m0083": {
+    "zh": "裁剪失败：{0}",
+    "en": "Could not crop the image: {0}"
+  },
+  "m0084": {
+    "zh": "裁剪头像",
+    "en": "Crop profile picture"
+  },
+  "m0085": {
+    "zh": "拖动图片调整位置，滑动缩放。动态图片使用第一帧。",
+    "en": "Drag to position the image and use the slider to zoom. Animated images use the first frame."
+  },
+  "m0086": {
+    "zh": "居中重置",
+    "en": "Reset to center"
+  },
+  "m0087": {
+    "zh": "使用此头像",
+    "en": "Use this picture"
+  },
+  "m0088": {
+    "zh": "请填写当前账号和密码",
+    "en": "Enter your current account and password"
+  },
+  "m0089": {
+    "zh": "上传失败，请检查网络、当前账号密码或服务端上传限制。超时后请先取消并刷新头像确认结果，不要重复上传。",
+    "en": "Upload failed. Check your connection, current password and server upload limits. After a timeout, cancel and refresh your picture to check the result before uploading again."
+  },
+  "m0090": {
+    "zh": "图片已转换为小尺寸 PNG。需要当前密码验证身份；密码不会保存。",
+    "en": "The picture has been converted to a small PNG. Your current password is required to verify your identity and will not be saved."
+  },
+  "m0091": {
+    "zh": "发现此账号的本地缓存",
+    "en": "Local cache found for this account"
+  },
+  "m0092": {
+    "zh": "不同步：保留本地笔记和未上传修改，登录后可手动同步。\n\n重新同步：用服务端数据替换当前账号缓存，未上传修改将被丢弃，不会先上传。下载失败时保留原缓存。",
+    "en": "Keep local data: keep local notes and pending changes. You can sync manually after signing in.\n\nDownload again: replace this account’s cache with server data. Pending changes will be discarded without uploading first. If downloading fails, the original cache is kept."
+  },
+  "m0093": {
+    "zh": "不同步",
+    "en": "Keep local data"
+  },
+  "m0094": {
+    "zh": "重新同步",
+    "en": "Download again"
+  },
+  "m0095": {
+    "zh": "下载失败：{0}",
+    "en": "Download failed: {0}"
+  },
+  "m0096": {
+    "zh": "图片尚未缓存或无法读取{0}",
+    "en": "Image is not cached or cannot be read{0}"
+  },
+  "m0097": {
+    "zh": "正在下载…",
+    "en": "Downloading…"
+  },
+  "m0098": {
+    "zh": "下载图片",
+    "en": "Download image"
+  },
+  "m0099": {
+    "zh": "请输入标签名称",
+    "en": "Enter a tag name"
+  },
+  "m0100": {
+    "zh": "未能确认创建成功：{0}。若请求中断，请先同步核对标签列表。",
+    "en": "Could not confirm creation: {0}. If the request was interrupted, sync first to check the tag list."
+  },
+  "m0101": {
+    "zh": "创建标签",
+    "en": "Create tag"
+  },
+  "m0102": {
+    "zh": "需要联网。创建的标签可以稍后添加到笔记，不会修改已有笔记。",
+    "en": "An internet connection is required. You can add this tag to notes later; existing notes will not change."
+  },
+  "m0103": {
+    "zh": "标签名称",
+    "en": "Tag name"
+  },
+  "m0104": {
+    "zh": "创建",
+    "en": "Create"
+  },
+  "m0105": {
+    "zh": "读取设置失败：{0}",
+    "en": "Could not load settings: {0}"
+  },
+  "m0106": {
+    "zh": "保存设置失败：{0}",
+    "en": "Could not save settings: {0}"
+  },
+  "m0107": {
+    "zh": "默认编辑器",
+    "en": "Default editor"
+  },
+  "m0108": {
+    "zh": "用于当前账号在本机新建笔记，不改变已有笔记格式。新建时仍可临时选择另一种格式。",
+    "en": "Applies to new notes for this account on this device. Existing note formats stay unchanged. You can still choose another format when creating a note."
+  },
+  "m0109": {
+    "zh": "重试读取",
+    "en": "Reload"
+  },
+  "m0110": {
+    "zh": "请输入有效的 http:// 或 https:// 链接，不支持内嵌账号密码。",
+    "en": "Enter a valid http:// or https:// link without an embedded username or password."
+  },
+  "m0111": {
+    "zh": "插入链接",
+    "en": "Insert link"
+  },
+  "m0112": {
+    "zh": "链接地址",
+    "en": "Link address"
+  },
+  "m0113": {
+    "zh": "确定",
+    "en": "OK"
+  },
+  "m0114": {
+    "zh": "保存未完成，请重试。",
+    "en": "Save incomplete. Please retry."
+  },
+  "m0115": {
+    "zh": "保存到本地失败：{0}",
+    "en": "Could not save locally: {0}"
+  },
+  "m0116": {
+    "zh": "正在保存",
+    "en": "Saving"
+  },
+  "m0117": {
+    "zh": "重试保存",
+    "en": "Retry save"
+  },
+  "m0118": {
+    "zh": "行数须为 1–20，列数须为 1–10 的整数。",
+    "en": "Use whole numbers: 1–20 rows and 1–10 columns."
+  },
+  "m0119": {
+    "zh": "插入表格",
+    "en": "Insert table"
+  },
+  "m0120": {
+    "zh": "行数（1–20）",
+    "en": "Rows (1–20)"
+  },
+  "m0121": {
+    "zh": "列数（1–10）",
+    "en": "Columns (1–10)"
+  },
+  "m0122": {
+    "zh": "插入",
+    "en": "Insert"
+  },
+  "m0123": {
+    "zh": "读取缓存用量失败，请重试",
+    "en": "Could not read cache usage. Please retry."
+  },
+  "m0124": {
+    "zh": "清理缓存失败，请重试",
+    "en": "Could not clear the cache. Please retry."
+  },
+  "m0125": {
+    "zh": "离线资源缓存",
+    "en": "Offline resource cache"
+  },
+  "m0126": {
+    "zh": "{0} 个文件 · {1}",
+    "en": "{0} files · {1}"
+  },
+  "m0127": {
+    "zh": "待处理资源下载：{0} 篇笔记",
+    "en": "Pending resource downloads: {0} notes"
+  },
+  "m0128": {
+    "zh": "仅统计当前账号已下载的图片和附件。清理也会移除该账号的资源下载任务；笔记正文、待同步修改和文件列表会保留。清理后需联网重新下载。",
+    "en": "Counts downloaded images and attachments for the current account only. Clearing also removes its resource download tasks. Note bodies, pending changes and file lists are kept. An internet connection is required to download resources again."
+  },
+  "m0129": {
+    "zh": "不包含导出或分享产生的副本。数据库空间可供后续复用，应用占用空间不一定立即缩小。",
+    "en": "Does not include exported or shared copies. Database space can be reused later, so the app’s storage usage may not shrink immediately."
+  },
+  "m0130": {
+    "zh": "确认清理当前账号的离线图片和附件？",
+    "en": "Clear this account’s offline images and attachments?"
+  },
+  "m0131": {
+    "zh": "离线资源缓存已清理",
+    "en": "Offline resource cache cleared"
+  },
+  "m0132": {
+    "zh": "确认清理",
+    "en": "Confirm clear"
+  },
+  "m0133": {
+    "zh": "清理缓存",
+    "en": "Clear cache"
+  },
+  "m0134": {
+    "zh": "读取失败：{0}",
+    "en": "Could not read: {0}"
+  },
+  "m0135": {
+    "zh": "导入失败：{0}",
+    "en": "Import failed: {0}"
+  },
+  "m0136": {
+    "zh": "导入笔记原文",
+    "en": "Import note source"
+  },
+  "m0137": {
+    "zh": "支持 Markdown、TXT、HTML、RTF、DOCX 和 .gemsnote 归档。RTF/DOCX 导入为富文本笔记。",
+    "en": "Supports Markdown, TXT, HTML, RTF, DOCX and .gemsnote archives. RTF/DOCX files become rich-text notes."
+  },
+  "m0138": {
+    "zh": "选择文件",
+    "en": "Choose file"
+  },
+  "m0139": {
+    "zh": "格式：{0}，{1} 个字符",
+    "en": "Format: {0}, {1} characters"
+  },
+  "m0140": {
+    "zh": "导入",
+    "en": "Import"
+  },
+  "m0141": {
+    "zh": "珠玑笔记",
+    "en": "Gemsnote"
+  },
+  "m0142": {
+    "zh": "请输入服务器地址",
+    "en": "Enter a server address"
+  },
+  "m0143": {
+    "zh": "邮箱或用户名",
+    "en": "Email or username"
+  },
+  "m0144": {
+    "zh": "请输入邮箱或用户名",
+    "en": "Enter your email or username"
+  },
+  "m0145": {
+    "zh": "密码",
+    "en": "Password"
+  },
+  "m0146": {
+    "zh": "请输入密码",
+    "en": "Enter your password"
+  },
+  "m0147": {
+    "zh": "正在登录…",
+    "en": "Signing in…"
+  },
+  "m0148": {
+    "zh": "登录",
+    "en": "Sign in"
+  },
+  "m0149": {
+    "zh": "选择已登录账号",
+    "en": "Choose a signed-in account"
+  },
+  "m0150": {
+    "zh": "找回密码",
+    "en": "Reset password"
+  },
+  "m0151": {
+    "zh": "无法连接服务器，请检查地址和网络。",
+    "en": "Cannot connect to the server. Check the address and your connection."
+  },
+  "m0152": {
+    "zh": "该地址不是 Gemsnote API2 服务端。",
+    "en": "This address is not a Gemsnote API2 server."
+  },
+  "m0153": {
+    "zh": "客户端版本过低，请先升级。",
+    "en": "Please upgrade this client to continue."
+  },
+  "m0154": {
+    "zh": "服务端版本过低，请先升级。",
+    "en": "Please upgrade the server to continue."
+  },
+  "m0155": {
+    "zh": "服务器地址无效。",
+    "en": "Invalid server address."
+  },
+  "m0156": {
+    "zh": "登录或同步失败：{0}",
+    "en": "Sign-in or sync failed: {0}"
+  },
+  "m0157": {
+    "zh": "仍有未同步的修改",
+    "en": "You have unsynced changes"
+  },
+  "m0158": {
+    "zh": "退出前上传未完成，是否不同步退出？本地数据将保留，下次登录同一服务器的同一用户后可继续同步。",
+    "en": "Uploading before sign-out did not finish. Sign out without syncing? Local data will be kept. Sign in as the same user on the same server to continue syncing later."
+  },
+  "m0159": {
+    "zh": "不同步退出",
+    "en": "Sign out without syncing"
+  },
+  "m0160": {
+    "zh": "公式原文",
+    "en": "Formula source"
+  },
+  "m0161": {
+    "zh": "已复制",
+    "en": "Copied"
+  },
+  "m0162": {
+    "zh": "复制失败，请重试",
+    "en": "Could not copy. Please retry."
+  },
+  "m0163": {
+    "zh": "图片尚未缓存{0}",
+    "en": "Image is not cached{0}"
+  },
+  "m0164": {
+    "zh": "移动失败：{0}",
+    "en": "Move failed: {0}"
+  },
+  "m0165": {
+    "zh": "移动笔记本",
+    "en": "Move notebook"
+  },
+  "m0166": {
+    "zh": "选择新的父笔记本。此操作先保存到本机，下次同步时上传。",
+    "en": "Choose a new parent notebook. The change is saved locally and uploaded at the next sync."
+  },
+  "m0167": {
+    "zh": "读取失败，点击重试",
+    "en": "Could not load. Tap to retry."
+  },
+  "m0168": {
+    "zh": "移动",
+    "en": "Move"
+  },
+  "m0169": {
+    "zh": "撤销",
+    "en": "Undo"
+  },
+  "m0170": {
+    "zh": "重做",
+    "en": "Redo"
+  },
+  "m0171": {
+    "zh": "正文已变化，请重新选择文字后插入链接。",
+    "en": "The body has changed. Select the text again before inserting a link."
+  },
+  "m0172": {
+    "zh": "图片地址无效，未插入正文",
+    "en": "Invalid image address. Nothing was inserted."
+  },
+  "m0173": {
+    "zh": "图片已插入并保存到本地，正文待同步。同步后可在阅读页下载预览图片。",
+    "en": "Image inserted and saved locally, ready to sync. After syncing, download the image from the reader to preview it."
+  },
+  "m0174": {
+    "zh": "插入图片失败：{0}",
+    "en": "Could not insert image: {0}"
+  },
+  "m0175": {
+    "zh": "图片已暂存到本机。联网后从账号菜单的“本地待上传资源”上传并插入正文。",
+    "en": "Image staged on this device. When online, use Local upload queue in the account menu to upload and insert it."
+  },
+  "m0176": {
+    "zh": "暂存图片失败：{0}",
+    "en": "Could not stage image: {0}"
+  },
+  "m0177": {
+    "zh": "编辑 Markdown",
+    "en": "Edit Markdown"
+  },
+  "m0178": {
+    "zh": "编辑 HTML 原文",
+    "en": "Edit HTML source"
+  },
+  "m0179": {
+    "zh": "可视化编辑",
+    "en": "Visual editor"
+  },
+  "m0180": {
+    "zh": "此笔记包含图片、不支持的链接或复杂 HTML，请继续编辑原文，避免丢失内容。",
+    "en": "This note contains images, unsupported links or complex HTML. Continue editing the source to preserve its contents."
+  },
+  "m0181": {
+    "zh": "继续编辑",
+    "en": "Continue editing"
+  },
+  "m0182": {
+    "zh": "预览 Markdown",
+    "en": "Preview Markdown"
+  },
+  "m0183": {
+    "zh": "预览富文本",
+    "en": "Preview rich text"
+  },
+  "m0184": {
+    "zh": "保存到本地",
+    "en": "Save locally"
+  },
+  "m0185": {
+    "zh": "笔记标题",
+    "en": "Note title"
+  },
+  "m0186": {
+    "zh": "编辑 HTML 原文，预览显示基本排版及已缓存图片，不联网加载资源或执行脚本。原文将完整保存。",
+    "en": "Edit HTML source. The preview shows basic formatting and cached images, without loading online resources or running scripts. The full source will be saved."
+  },
+  "m0187": {
+    "zh": "离线暂存图片",
+    "en": "Stage image offline"
+  },
+  "m0188": {
+    "zh": "插入图片",
+    "en": "Insert image"
+  },
+  "m0189": {
+    "zh": "在文末插入图片",
+    "en": "Insert image at end"
+  },
+  "m0190": {
+    "zh": "加粗",
+    "en": "Bold"
+  },
+  "m0191": {
+    "zh": "斜体",
+    "en": "Italic"
+  },
+  "m0192": {
+    "zh": "行内代码",
+    "en": "Inline code"
+  },
+  "m0193": {
+    "zh": "标题",
+    "en": "Heading"
+  },
+  "headingLevel": {
+    "zh": "{0} 级标题",
+    "en": "Heading {0}"
+  },
+  "markdownFootnote": {
+    "zh": "脚注",
+    "en": "Footnote"
+  },
+  "markdownAnchor": {
+    "zh": "文内链接",
+    "en": "Document link"
+  },
+  "m0194": {
+    "zh": "无序列表",
+    "en": "Bulleted list"
+  },
+  "m0195": {
+    "zh": "有序列表",
+    "en": "Numbered list"
+  },
+  "m0196": {
+    "zh": "引用",
+    "en": "Quote"
+  },
+  "m0197": {
+    "zh": "删除线",
+    "en": "Strikethrough"
+  },
+  "m0198": {
+    "zh": "代码块",
+    "en": "Code block"
+  },
+  "m0199": {
+    "zh": "任务列表",
+    "en": "Task list"
+  },
+  "m0200": {
+    "zh": "分隔线",
+    "en": "Horizontal rule"
+  },
+  "m0201": {
+    "zh": "行内公式",
+    "en": "Inline formula"
+  },
+  "m0202": {
+    "zh": "公式块",
+    "en": "Formula block"
+  },
+  "m0203": {
+    "zh": "使用 Markdown 开始记录…",
+    "en": "Start writing in Markdown…"
+  },
+  "m0204": {
+    "zh": "输入 HTML 原文，例如 <p>开始记录…</p>",
+    "en": "Enter HTML source, such as <p>Start writing…</p>"
+  },
+  "m0205": {
+    "zh": "已停止",
+    "en": "Stopped"
+  },
+  "m0206": {
+    "zh": "下载处理完成",
+    "en": "Download processing complete"
+  },
+  "m0207": {
+    "zh": "{0}：已处理 {1} 个，失败 {2} 个。缓存最多 64 MiB，较早文件可能被淘汰。",
+    "en": "{0}: processed {1}, failed {2}. The cache holds up to 64 MiB; older files may be evicted."
+  },
+  "m0208": {
+    "zh": "读取文件列表失败：{0}",
+    "en": "Could not read the file list: {0}"
+  },
+  "m0209": {
+    "zh": "附件已上传",
+    "en": "Attachment uploaded"
+  },
+  "m0210": {
+    "zh": "附件已上传，但本地刷新失败，请同步后刷新文件列表，勿重复上传",
+    "en": "Attachment uploaded, but the local refresh failed. Sync and refresh the file list; do not upload it again."
+  },
+  "m0211": {
+    "zh": "无法上传附件：{0}",
+    "en": "Could not upload attachment: {0}"
+  },
+  "m0212": {
+    "zh": "附件已保存到本机，可从待上传附件中处理",
+    "en": "Attachment saved on this device. Open the upload queue to continue."
+  },
+  "m0213": {
+    "zh": "暂存附件失败：{0}",
+    "en": "Could not stage attachment: {0}"
+  },
+  "m0214": {
+    "zh": "打开附件失败：未缓存、缓存已失效或系统无法打开，请联网下载后重试",
+    "en": "Could not open attachment: it is not cached, the cache has expired, or no app can open it. Download it online and retry."
+  },
+  "m0215": {
+    "zh": "打开附件失败，请检查网络或系统文件打开功能后重试（最大 32 MiB）",
+    "en": "Could not open attachment. Check your connection and available apps, then retry (maximum 32 MiB)."
+  },
+  "m0216": {
+    "zh": "无法定位分享窗口",
+    "en": "Could not locate the share sheet"
+  },
+  "m0217": {
+    "zh": "分享附件失败：附件未缓存、缓存已失效或无法打开分享菜单，请联网下载后重试",
+    "en": "Could not share attachment: it is not cached, the cache has expired, or the share sheet is unavailable. Download it online and retry."
+  },
+  "m0218": {
+    "zh": "分享附件失败，请检查网络、文件权限或系统分享功能后重试（最大 32 MiB）",
+    "en": "Could not share attachment. Check your connection, file permissions and system sharing, then retry (maximum 32 MiB)."
+  },
+  "m0219": {
+    "zh": "附件已保存",
+    "en": "Attachment saved"
+  },
+  "m0220": {
+    "zh": "保存附件失败：附件未缓存、缓存已失效或无法写入保存位置，请联网下载后重试",
+    "en": "Could not save attachment: it is not cached, the cache has expired, or the destination is not writable. Download it online and retry."
+  },
+  "m0221": {
+    "zh": "保存附件失败，请检查网络、文件权限或保存位置后重试（最大 32 MiB）",
+    "en": "Could not save attachment. Check your connection, file permissions and destination, then retry (maximum 32 MiB)."
+  },
+  "m0222": {
+    "zh": "图片与附件",
+    "en": "Images and attachments"
+  },
+  "m0223": {
+    "zh": "本地附件",
+    "en": "Local attachments"
+  },
+  "m0224": {
+    "zh": "离线添加附件",
+    "en": "Add attachment offline"
+  },
+  "m0225": {
+    "zh": "刷新文件列表",
+    "en": "Refresh file list"
+  },
+  "m0226": {
+    "zh": "离线缓存",
+    "en": "Offline cache"
+  },
+  "m0227": {
+    "zh": "仅查看缓存，可能不是最新内容；未缓存图片需联网查看。",
+    "en": "View cached content only, which may be out of date. Uncached images require an internet connection."
+  },
+  "m0228": {
+    "zh": "图片最多 8 MiB，附件最多 32 MiB，缓存合计 64 MiB。已下载附件可离线保存，取消系统保存也保留缓存。联网刷新会清除本笔记旧文件缓存。",
+    "en": "Images are limited to 8 MiB and attachments to 32 MiB, with a combined 64 MiB cache. Downloaded attachments can be saved offline; cancelling the save keeps the cache. Refreshing online clears this note’s previous file cache."
+  },
+  "m0229": {
+    "zh": "批量缓存会使用网络流量，最多并行下载 3 个文件；离开页面将停止安排后续下载。",
+    "en": "Batch caching uses network data, with up to 3 simultaneous downloads. Leaving this page stops new downloads from being scheduled."
+  },
+  "m0230": {
+    "zh": "缓存当前笔记文件",
+    "en": "Cache this note’s files"
+  },
+  "m0231": {
+    "zh": "重试失败文件",
+    "en": "Retry failed files"
+  },
+  "m0232": {
+    "zh": "正在停止，等待已开始的下载结束…",
+    "en": "Stopping. Waiting for active downloads to finish…"
+  },
+  "m0233": {
+    "zh": "停止下载",
+    "en": "Stop downloads"
+  },
+  "m0234": {
+    "zh": "已处理 {0}/{1}，失败 {2}",
+    "en": "Processed {0}/{1}, failed {2}"
+  },
+  "m0235": {
+    "zh": "暂无图片或附件",
+    "en": "No images or attachments"
+  },
+  "m0236": {
+    "zh": "请刷新重试",
+    "en": "Refresh and retry"
+  },
+  "m0237": {
+    "zh": "附件 · {0}",
+    "en": "Attachment · {0}"
+  },
+  "m0238": {
+    "zh": "图片 · {0}",
+    "en": "Image · {0}"
+  },
+  "m0239": {
+    "zh": "打开附件",
+    "en": "Open attachment"
+  },
+  "m0240": {
+    "zh": "保存附件",
+    "en": "Save attachment"
+  },
+  "m0241": {
+    "zh": "分享附件",
+    "en": "Share attachment"
+  },
+  "m0242": {
+    "zh": "图片已保存",
+    "en": "Image saved"
+  },
+  "m0243": {
+    "zh": "保存图片失败，请检查保存位置或可用空间后重试",
+    "en": "Could not save image. Check the destination and available storage, then retry."
+  },
+  "m0244": {
+    "zh": "图片",
+    "en": "Image"
+  },
+  "m0245": {
+    "zh": "正在保存…",
+    "en": "Saving…"
+  },
+  "m0246": {
+    "zh": "保存图片",
+    "en": "Save image"
+  },
+  "m0247": {
+    "zh": "无法解码图片，请返回重试",
+    "en": "Could not decode the image. Go back and retry."
+  },
+  "m0248": {
+    "zh": "恢复历史正文",
+    "en": "Restore historical body"
+  },
+  "m0249": {
+    "zh": "将替换当前本地正文，包括尚未同步的正文修改。标题、标签、笔记本和星标保持不变。正文中的图片引用会保留，但不能找回服务端已删除的图片，也不恢复附件列表。恢复后需要同步到服务器。",
+    "en": "This replaces the current local body, including unsynced body changes. The title, tags, notebook and star stay unchanged. Image references are kept, but deleted server images cannot be recovered, and the attachment list is not restored. Sync afterwards to update the server."
+  },
+  "m0250": {
+    "zh": "恢复",
+    "en": "Restore"
+  },
+  "m0251": {
+    "zh": "恢复失败：{0}",
+    "en": "Restore failed: {0}"
+  },
+  "m0252": {
+    "zh": "{0} · 历史版本",
+    "en": "{0} · History"
+  },
+  "m0253": {
+    "zh": "读取历史正文失败：{0}",
+    "en": "Could not read historical body: {0}"
+  },
+  "m0254": {
+    "zh": "历史版本",
+    "en": "Version history"
+  },
+  "m0255": {
+    "zh": "已查看的正文与已下载的历史图片可离线阅读。恢复保留图片引用，不恢复附件列表。",
+    "en": "Previously viewed bodies and downloaded historical images can be read offline. Restoring keeps image references without restoring the attachment list."
+  },
+  "m0256": {
+    "zh": "读取历史版本失败：{0}",
+    "en": "Could not read version history: {0}"
+  },
+  "m0257": {
+    "zh": "暂无缓存的历史版本",
+    "en": "No cached history"
+  },
+  "m0258": {
+    "zh": "暂无历史版本",
+    "en": "No version history"
+  },
+  "m0259": {
+    "zh": "修改用户：{0}",
+    "en": "Updated by: {0}"
+  },
+  "m0260": {
+    "zh": "恢复此版本正文",
+    "en": "Restore this version’s body"
+  },
+  "m0261": {
+    "zh": "上传未完成或结果未确认：{0}。正文未插入图片；图片资源可能已经上传，请勿直接重复提交。",
+    "en": "Upload incomplete or unconfirmed: {0}. No image was inserted in the body. The image may already be uploaded; do not submit again yet."
+  },
+  "m0262": {
+    "zh": "插入正文图片",
+    "en": "Insert body image"
+  },
+  "m0263": {
+    "zh": "将先上传当前笔记，再上传图片。插入后的正文保存到本地，下次同步后图片才会关联到服务端笔记。需要当前密码验证，密码不会保存。",
+    "en": "This uploads the current note before the image. The updated body is saved locally; the next sync links the image to the server note. Your current password is required and will not be saved."
+  },
+  "m0264": {
+    "zh": "上传并插入",
+    "en": "Upload and insert"
+  },
+  "m0265": {
+    "zh": "无法打开链接，请重试或复制地址到浏览器",
+    "en": "Could not open the link. Retry or copy the address to a browser."
+  },
+  "m0266": {
+    "zh": "目标网站：{0}",
+    "en": "Destination: {0}"
+  },
+  "m0267": {
+    "zh": "确认后交给浏览器或系统关联应用打开。",
+    "en": "Confirm to open with your browser or the system’s associated app."
+  },
+  "m0268": {
+    "zh": "此地址仅支持查看和复制。",
+    "en": "This address can only be viewed and copied."
+  },
+  "m0269": {
+    "zh": "外部打开",
+    "en": "Open externally"
+  },
+  "m0270": {
+    "zh": "复制链接",
+    "en": "Copy link"
+  },
+  "m0271": {
+    "zh": "分享位置不可用",
+    "en": "Share position unavailable"
+  },
+  "m0272": {
+    "zh": "系统分享失败，请重试；较大笔记请使用导出原文（分享最多 256 KiB）",
+    "en": "System sharing failed. Please retry; export larger notes as source files (sharing limit: 256 KiB)."
+  },
+  "m0273": {
+    "zh": "笔记已导出",
+    "en": "Note exported"
+  },
+  "m0274": {
+    "zh": "导出失败，请检查保存位置或可用空间后重试",
+    "en": "Export failed. Check the destination and available storage, then retry."
+  },
+  "m0275": {
+    "zh": "无标题",
+    "en": "Untitled"
+  },
+  "m0276": {
+    "zh": "查看预览",
+    "en": "Show preview"
+  },
+  "m0277": {
+    "zh": "查看原文",
+    "en": "Show source"
+  },
+  "m0278": {
+    "zh": "复制 Markdown 原文",
+    "en": "Copy Markdown source"
+  },
+  "m0279": {
+    "zh": "复制 HTML 原文",
+    "en": "Copy HTML source"
+  },
+  "m0280": {
+    "zh": "编辑",
+    "en": "Edit"
+  },
+  "m0281": {
+    "zh": "正在分享…",
+    "en": "Sharing…"
+  },
+  "m0282": {
+    "zh": "系统分享原文",
+    "en": "Share note source"
+  },
+  "m0283": {
+    "zh": "正在导出…",
+    "en": "Exporting…"
+  },
+  "m0284": {
+    "zh": "导出笔记",
+    "en": "Export note"
+  },
+  "m0285": {
+    "zh": "编辑标签",
+    "en": "Edit tags"
+  },
+  "m0286": {
+    "zh": "彻底删除",
+    "en": "Delete permanently"
+  },
+  "m0287": {
+    "zh": "取消星标",
+    "en": "Remove star"
+  },
+  "m0288": {
+    "zh": "添加星标",
+    "en": "Add star"
+  },
+  "m0289": {
+    "zh": "移动到笔记本",
+    "en": "Move to notebook"
+  },
+  "m0290": {
+    "zh": "正在复制…",
+    "en": "Copying…"
+  },
+  "m0291": {
+    "zh": "复制到笔记本",
+    "en": "Copy to notebook"
+  },
+  "m0292": {
+    "zh": "恢复笔记",
+    "en": "Restore note"
+  },
+  "m0293": {
+    "zh": "移入回收站",
+    "en": "Move to trash"
+  },
+  "m0294": {
+    "zh": "{0}  ·  修改 {1}",
+    "en": "{0}  ·  Updated {1}"
+  },
+  "m0295": {
+    "zh": "搜索失败：{0}",
+    "en": "Search failed: {0}"
+  },
+  "m0296": {
+    "zh": "笔记已删除或移入回收站，请重新搜索",
+    "en": "The note was deleted or moved to trash. Please search again."
+  },
+  "m0297": {
+    "zh": "读取笔记失败，点击笔记可重试：{0}",
+    "en": "Could not read the note. Tap it to retry: {0}"
+  },
+  "m0298": {
+    "zh": "搜索笔记",
+    "en": "Search notes"
+  },
+  "m0299": {
+    "zh": "，还有更多结果",
+    "en": ", more results available"
+  },
+  "m0300": {
+    "zh": "已显示 {0} 篇{1}",
+    "en": "Showing {0} notes{1}"
+  },
+  "m0301": {
+    "zh": "输入关键词开始搜索",
+    "en": "Enter a keyword to search"
+  },
+  "m0302": {
+    "zh": "正在搜索…",
+    "en": "Searching…"
+  },
+  "m0303": {
+    "zh": "请重试搜索",
+    "en": "Retry the search"
+  },
+  "m0304": {
+    "zh": "没有匹配的笔记",
+    "en": "No matching notes"
+  },
+  "m0305": {
+    "zh": "加载更多",
+    "en": "Load more"
+  },
+  "m0306": {
+    "zh": "保存失败：{0}",
+    "en": "Save failed: {0}"
+  },
+  "m0307": {
+    "zh": "每次输入一个标签。保存到本地后，需要同步才会更新服务端。",
+    "en": "Enter one tag at a time. Changes are saved locally; sync to update the server."
+  },
+  "m0308": {
+    "zh": "受当前接口限制，已有标签不能全部清空。",
+    "en": "The current API does not support removing all existing tags."
+  },
+  "m0309": {
+    "zh": "新标签",
+    "en": "New tag"
+  },
+  "m0310": {
+    "zh": "添加标签",
+    "en": "Add tag"
+  },
+  "m0311": {
+    "zh": "读取已有标签失败，点击重试",
+    "en": "Could not load existing tags. Tap to retry."
+  },
+  "m0312": {
+    "zh": "已有标签",
+    "en": "Existing tags"
+  },
+  "m0313": {
+    "zh": "读取创建状态失败：{0}",
+    "en": "Could not read creation status: {0}"
+  },
+  "m0314": {
+    "zh": "查询失败：{0}，本地数据已保留",
+    "en": "Lookup failed: {0}. Local data is kept."
+  },
+  "m0315": {
+    "zh": "允许再次创建？",
+    "en": "Allow another creation attempt?"
+  },
+  "m0316": {
+    "zh": "关联到这个服务端笔记本？",
+    "en": "Link to this server notebook?"
+  },
+  "m0317": {
+    "zh": "请先核实服务端没有创建成功。重复创建可能产生同名笔记本；此操作只恢复待同步状态，不会立即发送请求。",
+    "en": "First verify that the server did not create the notebook. Repeating creation may produce duplicate names. This only marks it for a future sync; no request is sent now."
+  },
+  "m0318": {
+    "zh": "将“{0}”及其本地子笔记本、笔记关联到服务端笔记本 {1}，保留本地未同步内容。",
+    "en": "Link “{0}”, its local subnotebooks and notes to server notebook {1}, keeping unsynced local content."
+  },
+  "m0319": {
+    "zh": "恢复失败：{0}，本地数据已保留",
+    "en": "Recovery failed: {0}. Local data is kept."
+  },
+  "m0320": {
+    "zh": "笔记本创建状态",
+    "en": "Notebook creation status"
+  },
+  "m0321": {
+    "zh": "已保存在本机，等待下次同步创建。可继续添加子笔记本和笔记。",
+    "en": "Saved on this device, waiting to be created at the next sync. You can continue adding subnotebooks and notes."
+  },
+  "m0322": {
+    "zh": "创建请求结果未确认，本地数据已保留。不会自动重复创建；请联网查询名称、父级和排序相同的服务端笔记本。",
+    "en": "The creation result is unconfirmed. Local data is kept and creation will not be repeated automatically. Go online to look for a server notebook with the same name, parent and order."
+  },
+  "m0323": {
+    "zh": "已完成服务端关联，请关闭并刷新。",
+    "en": "Server notebook linked. Close and refresh."
+  },
+  "m0324": {
+    "zh": "正在读取创建状态。",
+    "en": "Reading creation status."
+  },
+  "m0325": {
+    "zh": "没有匹配项。可能尚未创建成功，或已被其他客户端修改；请核实后再决定是否重试。",
+    "en": "No matches. The notebook may not have been created, or another client may have changed it. Check before deciding whether to retry."
+  },
+  "m0326": {
+    "zh": "查询服务端匹配项",
+    "en": "Look for server matches"
+  },
+  "m0327": {
+    "zh": "请输入笔记本名称",
+    "en": "Enter a notebook name"
+  },
+  "m0328": {
+    "zh": "重命名笔记本",
+    "en": "Rename notebook"
+  },
+  "m0329": {
+    "zh": "新建笔记本",
+    "en": "New notebook"
+  },
+  "m0330": {
+    "zh": "新增子笔记本",
+    "en": "Add subnotebook"
+  },
+  "m0331": {
+    "zh": "笔记本名称",
+    "en": "Notebook name"
+  },
+  "m0332": {
+    "zh": "先保存到本机，下次同步时上传。",
+    "en": "Saved locally first, then uploaded at the next sync."
+  },
+  "m0333": {
+    "zh": "收起 {0}",
+    "en": "Collapse {0}"
+  },
+  "m0334": {
+    "zh": "展开 {0}",
+    "en": "Expand {0}"
+  },
+  "m0335": {
+    "zh": "搜索笔记本",
+    "en": "Search notebooks"
+  },
+  "m0336": {
+    "zh": "根目录",
+    "en": "Root"
+  },
+  "m0337": {
+    "zh": "没有匹配的笔记本",
+    "en": "No matching notebooks"
+  },
+  "m0338": {
+    "zh": "两次输入的新密码不一致",
+    "en": "The new passwords do not match"
+  },
+  "m0339": {
+    "zh": "修改失败，请检查网络、当前密码和新密码要求。若请求超时，密码可能已修改，请取消并用新密码重新登录确认，勿自动重试。",
+    "en": "Change failed. Check your connection, current password and new password requirements. If the request timed out, your password may have changed. Cancel and try signing in with the new password; do not retry automatically."
+  },
+  "m0340": {
+    "zh": "修改成功会使所有设备的登录状态失效，并返回登录页。本地笔记和未上传修改会保留；重新登录同一账号时请选择保留缓存，不要重新同步。",
+    "en": "Changing your password signs out all devices and returns you to sign-in. Local notes and pending changes are kept. When signing in to this account again, keep the cache rather than downloading everything again."
+  },
+  "m0341": {
+    "zh": "新密码",
+    "en": "New password"
+  },
+  "m0342": {
+    "zh": "确认新密码",
+    "en": "Confirm new password"
+  },
+  "m0343": {
+    "zh": "修改并退出登录",
+    "en": "Change and sign out"
+  },
+  "m0344": {
+    "zh": "请求失败：{0}",
+    "en": "Request failed: {0}"
+  },
+  "m0345": {
+    "zh": "请求已提交，请检查邮箱并按邮件说明重置密码。完成后返回登录页面。",
+    "en": "Request submitted. Check your inbox and follow the instructions to reset your password, then return to sign-in."
+  },
+  "m0346": {
+    "zh": "请输入有效的服务器地址",
+    "en": "Enter a valid server address"
+  },
+  "m0347": {
+    "zh": "账号邮箱",
+    "en": "Account email"
+  },
+  "m0348": {
+    "zh": "需要服务器已配置邮件发送功能。如果无法收到邮件，请联系管理员重置密码。",
+    "en": "Your server must have email delivery configured. If you cannot receive the email, ask your administrator to reset your password."
+  },
+  "m0349": {
+    "zh": "发送重置邮件",
+    "en": "Send reset email"
+  },
+  "m0350": {
+    "zh": "重新同步当前账号？",
+    "en": "Download this account’s data again?"
+  },
+  "m0351": {
+    "zh": "将用服务端数据替换当前账号的本地笔记、笔记本和标签，未上传的修改将被丢弃，不会先上传。其他账号的数据不受影响。\n\n下载失败时保留原缓存；下载成功后替换不可撤销。",
+    "en": "Server data will replace this account’s local notes, notebooks and tags. Pending changes will be discarded without uploading first. Other accounts are unaffected.\n\nThe original cache is kept if downloading fails. Once downloading succeeds, replacement cannot be undone."
+  },
+  "m0352": {
+    "zh": "确认重新同步",
+    "en": "Confirm download again"
+  },
+  "m0353": {
+    "zh": "正文链接（{0}）",
+    "en": "Body links ({0})"
+  },
+  "m0354": {
+    "zh": "查看地址后选择复制或外部打开",
+    "en": "Inspect an address, then copy it or open it externally"
+  },
+  "m0355": {
+    "zh": "最多列出 100 个不同地址，其余可查看原文。",
+    "en": "Shows up to 100 distinct addresses. View the source for the rest."
+  },
+  "m0356": {
+    "zh": "文件尚未缓存，请联网下载",
+    "en": "File is not cached. Connect to the internet to download it."
+  },
+  "m0357": {
+    "zh": "文件已缓存，可离线使用",
+    "en": "File cached for offline use"
+  },
+  "m0358": {
+    "zh": "文件已保存",
+    "en": "File saved"
+  },
+  "m0359": {
+    "zh": "图片无法解码",
+    "en": "Could not decode image"
+  },
+  "m0360": {
+    "zh": "读取共享文件失败：{0}",
+    "en": "Could not read shared file: {0}"
+  },
+  "m0361": {
+    "zh": "共享图片与附件",
+    "en": "Shared images and attachments"
+  },
+  "m0362": {
+    "zh": "离线使用已下载的文件；无法离线确认共享权限是否撤销。",
+    "en": "Use downloaded files offline. Shared permissions cannot be checked while offline."
+  },
+  "m0363": {
+    "zh": "操作时核实共享权限和文件版本；图片最多 8 MiB，附件最多 32 MiB。",
+    "en": "Permissions and file versions are checked when you use a file. Images: up to 8 MiB. Attachments: up to 32 MiB."
+  },
+  "m0364": {
+    "zh": "暂无共享资源",
+    "en": "No shared resources"
+  },
+  "m0365": {
+    "zh": " · 超出移动端大小限制",
+    "en": " · Exceeds the mobile size limit"
+  },
+  "m0366": {
+    "zh": "{0} B{1}",
+    "en": "{0} B{1}"
+  },
+  "m0367": {
+    "zh": "文件操作",
+    "en": "File actions"
+  },
+  "m0368": {
+    "zh": "下载到缓存",
+    "en": "Download to cache"
+  },
+  "m0369": {
+    "zh": "查看图片",
+    "en": "View image"
+  },
+  "m0370": {
+    "zh": "保存到文件",
+    "en": "Save to files"
+  },
+  "m0371": {
+    "zh": "用其他应用打开",
+    "en": "Open with another app"
+  },
+  "m0372": {
+    "zh": "系统分享",
+    "en": "System share"
+  },
+  "m0373": {
+    "zh": "读取共享列表失败：{0}",
+    "en": "Could not read shared list: {0}"
+  },
+  "m0374": {
+    "zh": "图片不属于共享资源快照",
+    "en": "Image is not in the shared resource snapshot"
+  },
+  "m0375": {
+    "zh": "读取共享正文失败：{0}",
+    "en": "Could not read shared body: {0}"
+  },
+  "m0376": {
+    "zh": "共享笔记",
+    "en": "Shared notes"
+  },
+  "m0377": {
+    "zh": "刷新共享列表",
+    "en": "Refresh shared list"
+  },
+  "m0378": {
+    "zh": "缓存可能已过期；离线时无法确认共享权限是否已撤销。",
+    "en": "The cache may be outdated. Shared permissions cannot be checked while offline."
+  },
+  "m0379": {
+    "zh": "只读浏览；已查看的正文和已下载的图片附件可离线使用。文件操作会核实在线共享权限和版本。",
+    "en": "Read-only browsing. Viewed bodies and downloaded images and attachments work offline. File operations verify permissions and versions when online."
+  },
+  "m0380": {
+    "zh": "暂无缓存的共享笔记",
+    "en": "No cached shared notes"
+  },
+  "m0381": {
+    "zh": "暂无共享笔记",
+    "en": "No shared notes"
+  },
+  "m0382": {
+    "zh": "共享者：{0}",
+    "en": "Shared by: {0}"
+  },
+  "m0383": {
+    "zh": "笔记已保存，清理待处理分享失败：{0}。重试不会重复创建笔记。",
+    "en": "Note saved, but the pending share could not be cleared: {0}. Retrying will not create a duplicate note."
+  },
+  "m0384": {
+    "zh": "忽略这条分享？",
+    "en": "Dismiss this share?"
+  },
+  "m0385": {
+    "zh": "将移除待处理内容，不创建笔记。",
+    "en": "Removes the pending content without creating a note."
+  },
+  "m0386": {
+    "zh": "忽略",
+    "en": "Dismiss"
+  },
+  "m0387": {
+    "zh": "忽略失败：{0}",
+    "en": "Could not dismiss: {0}"
+  },
+  "m0388": {
+    "zh": "导入分享文件",
+    "en": "Import shared file"
+  },
+  "m0389": {
+    "zh": "导入分享文本",
+    "en": "Import shared text"
+  },
+  "m0390": {
+    "zh": "保存到：{0}",
+    "en": "Save to: {0}"
+  },
+  "m0391": {
+    "zh": "按 Markdown 保存文本，不抓取网页或下载资源。保存后待同步上传。",
+    "en": "Save text as Markdown without fetching web pages or downloading resources. Sync later to upload the note."
+  },
+  "m0392": {
+    "zh": "{0} · {1} 字节",
+    "en": "{0} · {1} bytes"
+  },
+  "m0393": {
+    "zh": "文件将保存到本机待上传资源。联网后可从账号菜单上传，导入不会自动上传文件。",
+    "en": "The file will be staged on this device. Upload it from the account menu when online. Importing does not upload files automatically."
+  },
+  "m0394": {
+    "zh": "作为正文图片暂存",
+    "en": "Stage as a body image"
+  },
+  "m0395": {
+    "zh": "取消勾选可作为普通附件保留原始文件",
+    "en": "Uncheck to keep the original file as a regular attachment"
+  },
+  "m0396": {
+    "zh": "此分享已指定其他账号，请切换账号后继续，或忽略这条分享。",
+    "en": "This share is assigned to another account. Switch accounts to continue, or dismiss it."
+  },
+  "m0397": {
+    "zh": "分享正文",
+    "en": "Shared body"
+  },
+  "m0398": {
+    "zh": "请先创建笔记本，再回来导入；稍后处理会保留分享。",
+    "en": "Create a notebook first, then return to import. Choosing Later keeps the pending share."
+  },
+  "m0399": {
+    "zh": "稍后处理",
+    "en": "Later"
+  },
+  "m0400": {
+    "zh": "保存笔记",
+    "en": "Save note"
+  },
+  "m0401": {
+    "zh": "重试清理",
+    "en": "Retry cleanup"
+  },
+  "m0402": {
+    "zh": "正在准备同步…",
+    "en": "Preparing to sync…"
+  },
+  "m0403": {
+    "zh": "正在上传本地修改，已上传 {0} 篇",
+    "en": "Uploading local changes: {0} notes uploaded"
+  },
+  "m0404": {
+    "zh": "正在下载笔记本，已接收 {0} 个",
+    "en": "Downloading notebooks: {0} received"
+  },
+  "m0405": {
+    "zh": "正在下载笔记正文，已接收 {0} 篇",
+    "en": "Downloading note bodies: {0} received"
+  },
+  "m0406": {
+    "zh": "正在下载标签，已接收 {0} 个",
+    "en": "Downloading tags: {0} received"
+  },
+  "m0407": {
+    "zh": "正在保存本地数据…",
+    "en": "Saving local data…"
+  },
+  "m0408": {
+    "zh": "正在同步",
+    "en": "Syncing"
+  },
+  "m0409": {
+    "zh": "请保持应用打开，完成后此窗口会自动关闭。",
+    "en": "Keep the app open. This window closes when syncing finishes."
+  },
+  "m0410": {
+    "zh": "标签",
+    "en": "Tags"
+  },
+  "m0411": {
+    "zh": "读取标签失败，点击重试",
+    "en": "Could not read tags. Tap to retry."
+  },
+  "m0412": {
+    "zh": "过滤标签",
+    "en": "Filter tags"
+  },
+  "m0413": {
+    "zh": "清空过滤",
+    "en": "Clear filter"
+  },
+  "m0414": {
+    "zh": "显示未使用标签",
+    "en": "Show unused tags"
+  },
+  "m0415": {
+    "zh": "显示笔记最多的 10 个标签，其他请过滤查找",
+    "en": "Showing the 10 most-used tags. Filter to find others."
+  },
+  "m0416": {
+    "zh": "没有匹配的标签",
+    "en": "No matching tags"
+  },
+  "m0417": {
+    "zh": "暂无标签",
+    "en": "No tags"
+  },
+  "m0418": {
+    "zh": "暂无被笔记引用的标签",
+    "en": "No tags used by notes yet"
+  },
+  "m0419": {
+    "zh": "编辑器加载失败：{0}",
+    "en": "Could not load editor: {0}"
+  },
+  "m0420": {
+    "zh": "当前排版超出支持范围，请撤销后重试；未覆盖本地原文。",
+    "en": "This formatting is not supported. Undo and retry; the local source has not been overwritten."
+  },
+  "m0421": {
+    "zh": "读取或保存编辑内容失败，请重试：{0}",
+    "en": "Could not read or save edits. Please retry: {0}"
+  },
+  "m0422": {
+    "zh": "恢复编辑失败：{0}",
+    "en": "Could not resume editing: {0}"
+  },
+  "m0423": {
+    "zh": "插入链接失败：{0}",
+    "en": "Could not insert link: {0}"
+  },
+  "m0424": {
+    "zh": "插入表格失败：{0}",
+    "en": "Could not insert table: {0}"
+  },
+  "m0425": {
+    "zh": "排版失败：{0}",
+    "en": "Formatting failed: {0}"
+  },
+  "m0426": {
+    "zh": "请先点击表格中的单元格",
+    "en": "Select a table cell first"
+  },
+  "m0427": {
+    "zh": "删除当前行？",
+    "en": "Delete this row?"
+  },
+  "m0428": {
+    "zh": "删除当前列？",
+    "en": "Delete this column?"
+  },
+  "m0429": {
+    "zh": "所选行或列中的内容也会删除。",
+    "en": "Content in the selected row or column will also be deleted."
+  },
+  "m0430": {
+    "zh": "删除",
+    "en": "Delete"
+  },
+  "m0431": {
+    "zh": "表格操作失败：{0}",
+    "en": "Table operation failed: {0}"
+  },
+  "m0432": {
+    "zh": "完成",
+    "en": "Done"
+  },
+  "m0433": {
+    "zh": "下划线",
+    "en": "Underline"
+  },
+  "m0434": {
+    "zh": "文字颜色",
+    "en": "Text color"
+  },
+  "m0435": {
+    "zh": "默认黑色",
+    "en": "Default black"
+  },
+  "m0436": {
+    "zh": "红色",
+    "en": "Red"
+  },
+  "m0437": {
+    "zh": "橙色",
+    "en": "Orange"
+  },
+  "m0438": {
+    "zh": "绿色",
+    "en": "Green"
+  },
+  "m0439": {
+    "zh": "蓝色",
+    "en": "Blue"
+  },
+  "m0440": {
+    "zh": "紫色",
+    "en": "Purple"
+  },
+  "m0441": {
+    "zh": "高亮颜色",
+    "en": "Highlight color"
+  },
+  "m0442": {
+    "zh": "清除高亮",
+    "en": "Clear highlight"
+  },
+  "m0443": {
+    "zh": "黄色",
+    "en": "Yellow"
+  },
+  "m0444": {
+    "zh": "粉色",
+    "en": "Pink"
+  },
+  "m0445": {
+    "zh": "字号",
+    "en": "Font size"
+  },
+  "m0446": {
+    "zh": "小",
+    "en": "Small"
+  },
+  "m0447": {
+    "zh": "标准",
+    "en": "Normal"
+  },
+  "m0448": {
+    "zh": "大",
+    "en": "Large"
+  },
+  "m0449": {
+    "zh": "特大",
+    "en": "Extra large"
+  },
+  "m0450": {
+    "zh": "标题大小",
+    "en": "Heading size"
+  },
+  "m0451": {
+    "zh": "左对齐",
+    "en": "Align left"
+  },
+  "m0452": {
+    "zh": "居中",
+    "en": "Center"
+  },
+  "m0453": {
+    "zh": "右对齐",
+    "en": "Align right"
+  },
+  "m0454": {
+    "zh": "两端对齐",
+    "en": "Justify"
+  },
+  "m0455": {
+    "zh": "清除文字格式",
+    "en": "Clear text formatting"
+  },
+  "m0456": {
+    "zh": "正文",
+    "en": "Body"
+  },
+  "m0457": {
+    "zh": "移除链接",
+    "en": "Remove link"
+  },
+  "m0458": {
+    "zh": "表格行列操作",
+    "en": "Table rows and columns"
+  },
+  "m0459": {
+    "zh": "与右侧单元格合并",
+    "en": "Merge with cell on right"
+  },
+  "m0460": {
+    "zh": "与下方单元格合并",
+    "en": "Merge with cell below"
+  },
+  "m0461": {
+    "zh": "拆分当前单元格",
+    "en": "Split selected cell"
+  },
+  "m0462": {
+    "zh": "下方插入行",
+    "en": "Insert row below"
+  },
+  "m0463": {
+    "zh": "右侧插入列",
+    "en": "Insert column on right"
+  },
+  "m0464": {
+    "zh": "删除当前行",
+    "en": "Delete current row"
+  },
+  "m0465": {
+    "zh": "删除当前列",
+    "en": "Delete current column"
+  },
+  "m0466": {
+    "zh": "小组件对应的账号已切换，请从当前账号重新打开",
+    "en": "The widget’s account has changed. Open it again from the current account."
+  },
+  "m0467": {
+    "zh": "此笔记已移除或不在当前账号中",
+    "en": "This note was removed or is not in the current account."
+  },
+  "m0468": {
+    "zh": "请先在应用中新建笔记本",
+    "en": "Create a notebook in the app first."
+  },
+  "m0469": {
+    "zh": "选择新笔记的笔记本",
+    "en": "Choose a notebook for the new note"
+  },
+  "m0470": {
+    "zh": "打开小组件失败：{0}",
+    "en": "Could not open widget: {0}"
+  },
+  "m0471": {
+    "zh": "读取排序设置失败，暂按修改时间排序",
+    "en": "Could not load sort settings. Sorting by modification time for now."
+  },
+  "m0472": {
+    "zh": "保存排序设置失败，仍使用原排序",
+    "en": "Could not save sort settings. Keeping the previous order."
+  },
+  "m0473": {
+    "zh": "保存资源缓存设置失败，仍使用原设置，请重试",
+    "en": "Could not save resource cache settings. Keeping the previous setting; please retry."
+  },
+  "m0474": {
+    "zh": "资源缓存进度已恢复：{0} 篇笔记、{1} 个文件待处理，失败 {2} 项；可从账号菜单开始继续",
+    "en": "Resource caching resumed: {0} notes and {1} files pending, {2} failed. Continue from the account menu."
+  },
+  "m0475": {
+    "zh": "读取资源缓存任务失败，可从账号菜单开始重试",
+    "en": "Could not read resource download tasks. Retry from the account menu."
+  },
+  "m0476": {
+    "zh": "待处理分享",
+    "en": "Pending share"
+  },
+  "m0477": {
+    "zh": "没有待处理分享",
+    "en": "No pending shares"
+  },
+  "m0478": {
+    "zh": "读取分享失败：{0}",
+    "en": "Could not read share: {0}"
+  },
+  "m0479": {
+    "zh": "正在准备离线资源缓存…",
+    "en": "Preparing offline resource cache…"
+  },
+  "m0480": {
+    "zh": "资源缓存：已处理 {0} 篇、{1} 个文件，失败 {2} 项",
+    "en": "Resource cache: processed {0} notes and {1} files, {2} failed"
+  },
+  "m0481": {
+    "zh": "资源缓存",
+    "en": "Resource cache"
+  },
+  "m0482": {
+    "zh": "已结束",
+    "en": "Finished"
+  },
+  "m0483": {
+    "zh": "{0}（{1}；未完成进度已保存，可再次开始继续；缓存限额 64 MiB）",
+    "en": "{0} ({1}; pending progress is saved. Start again to continue. Cache limit: 64 MiB.)"
+  },
+  "m0484": {
+    "zh": "资源缓存失败（不影响笔记同步）：{0}",
+    "en": "Resource caching failed (note sync is unaffected): {0}"
+  },
+  "m0485": {
+    "zh": "头像刷新失败（不影响笔记同步）：{0}",
+    "en": "Picture refresh failed (note sync is unaffected): {0}"
+  },
+  "m0486": {
+    "zh": "读取头像缓存失败：{0}",
+    "en": "Could not read picture cache: {0}"
+  },
+  "m0487": {
+    "zh": "无法读取待同步状态：{0}",
+    "en": "Could not read pending sync status: {0}"
+  },
+  "m0488": {
+    "zh": "关闭提示",
+    "en": "Dismiss notice"
+  },
+  "m0489": {
+    "zh": "读取所有笔记失败：{0}",
+    "en": "Could not read all notes: {0}"
+  },
+  "m0490": {
+    "zh": "历史正文已恢复到本地，待同步",
+    "en": "Historical body restored locally, ready to sync"
+  },
+  "m0491": {
+    "zh": "彻底删除笔记？",
+    "en": "Permanently delete note?"
+  },
+  "m0492": {
+    "zh": "此操作无法恢复。下次同步会删除服务端的笔记、历史版本和附件；失败时保留待删除任务。",
+    "en": "This cannot be undone. The next sync deletes the note, history and attachments from the server. If it fails, the pending deletion is kept."
+  },
+  "m0493": {
+    "zh": "删除失败：{0}",
+    "en": "Delete failed: {0}"
+  },
+  "m0494": {
+    "zh": "读取标签笔记失败：{0}",
+    "en": "Could not read tagged notes: {0}"
+  },
+  "m0495": {
+    "zh": "复制",
+    "en": "Copy"
+  },
+  "m0496": {
+    "zh": "笔记已复制到本地，待同步",
+    "en": "Note copied locally, ready to sync"
+  },
+  "m0497": {
+    "zh": "操作失败：{0}",
+    "en": "Operation failed: {0}"
+  },
+  "m0498": {
+    "zh": "确定将“{0}”移入回收站吗？",
+    "en": "Move “{0}” to trash?"
+  },
+  "m0499": {
+    "zh": "新建笔记",
+    "en": "New note"
+  },
+  "m0500": {
+    "zh": "默认：{0}",
+    "en": "Default: {0}"
+  },
+  "m0501": {
+    "zh": "富文本",
+    "en": "Rich text"
+  },
+  "m0502": {
+    "zh": "新建{0}",
+    "en": "New {0}"
+  },
+  "m0503": {
+    "zh": "新建笔记失败：{0}",
+    "en": "Could not create note: {0}"
+  },
+  "m0504": {
+    "zh": "目标笔记本已不存在，请返回重新选择",
+    "en": "The destination notebook no longer exists. Go back and choose another."
+  },
+  "m0505": {
+    "zh": "同步完成",
+    "en": "Sync complete"
+  },
+  "m0506": {
+    "zh": "同步失败：{0}",
+    "en": "Sync failed: {0}"
+  },
+  "m0507": {
+    "zh": "切换账号失败，请重试",
+    "en": "Could not switch accounts. Please retry."
+  },
+  "m0508": {
+    "zh": "退出登录失败：{0}",
+    "en": "Sign-out failed: {0}"
+  },
+  "m0509": {
+    "zh": "账号菜单",
+    "en": "Account menu"
+  },
+  "m0510": {
+    "zh": "桌面小组件",
+    "en": "Home screen widget"
+  },
+  "m0511": {
+    "zh": "切换或添加账号",
+    "en": "Switch or add account"
+  },
+  "m0512": {
+    "zh": "立即同步",
+    "en": "Sync now"
+  },
+  "m0513": {
+    "zh": "完全同步（合并）",
+    "en": "Full sync (merge)"
+  },
+  "m0514": {
+    "zh": "同步后缓存图片和附件（可能使用移动数据）",
+    "en": "Cache images and attachments after sync (may use mobile data)"
+  },
+  "m0515": {
+    "zh": "正在读取资源缓存设置…",
+    "en": "Loading resource cache settings…"
+  },
+  "m0516": {
+    "zh": "读取资源缓存设置失败，点击重试",
+    "en": "Could not load resource cache settings. Tap to retry."
+  },
+  "m0517": {
+    "zh": "开始资源缓存",
+    "en": "Start resource caching"
+  },
+  "m0518": {
+    "zh": "停止资源缓存",
+    "en": "Stop resource caching"
+  },
+  "m0519": {
+    "zh": "前台自动同步（每分钟）",
+    "en": "Automatic foreground sync (every minute)"
+  },
+  "m0520": {
+    "zh": "回收站",
+    "en": "Trash"
+  },
+  "m0521": {
+    "zh": "关于",
+    "en": "About"
+  },
+  "m0522": {
+    "zh": "退出",
+    "en": "Sign out"
+  },
+  "m0523": {
+    "zh": "读取笔记本失败：{0}",
+    "en": "Could not read notebooks: {0}"
+  },
+  "m0524": {
+    "zh": "所有笔记",
+    "en": "All notes"
+  },
+  "m0525": {
+    "zh": "收起子笔记本",
+    "en": "Collapse subnotebooks"
+  },
+  "m0526": {
+    "zh": "展开子笔记本",
+    "en": "Expand subnotebooks"
+  },
+  "m0527": {
+    "zh": "笔记本待同步",
+    "en": "Notebook waiting to sync"
+  },
+  "m0528": {
+    "zh": "重命名",
+    "en": "Rename"
+  },
+  "m0529": {
+    "zh": "创建状态与恢复",
+    "en": "Creation status and recovery"
+  },
+  "m0530": {
+    "zh": "立即同步（{0} 篇待上传）",
+    "en": "Sync now ({0} notes pending)"
+  },
+  "m0531": {
+    "zh": "立即同步（{0} 篇笔记、{1} 个笔记本待上传）",
+    "en": "Sync now ({0} notes and {1} notebooks pending)"
+  },
+  "m0532": {
+    "zh": "笔记",
+    "en": "Notes"
+  },
+  "m0533": {
+    "zh": "已加星",
+    "en": "Starred"
+  },
+  "m0534": {
+    "zh": "共享",
+    "en": "Shared"
+  },
+  "m0535": {
+    "zh": "笔记排序",
+    "en": "Sort notes"
+  },
+  "m0536": {
+    "zh": "重试排序设置",
+    "en": "Retry sort settings"
+  },
+  "m0537": {
+    "zh": "选择笔记或开始全新记录。",
+    "en": "Choose a note or start writing."
+  },
+  "m0538": {
+    "zh": "本地修改尚未上传",
+    "en": "Local changes not uploaded yet"
+  },
+  "m0539": {
+    "zh": "长按 Android 桌面，添加“珠玑笔记最近笔记”。默认隐藏标题；开启后，桌面会显示当前账号最近 30 条笔记标题，不显示正文。编辑、同步及返回应用时刷新。",
+    "en": "Long-press the Android home screen and add Gemsnote Recent Notes. Titles are hidden by default. Enabling this shows the current account’s 30 most recent note titles, without bodies. The widget refreshes after edits, syncing and returning to the app."
+  },
+  "m0540": {
+    "zh": "在桌面显示笔记标题",
+    "en": "Show note titles on home screen"
+  },
+  "m0541": {
+    "zh": "刷新",
+    "en": "Refresh"
+  },
+  "languageTitle": {
+    "zh": "应用语言",
+    "en": "App language"
+  },
+  "languageLoadFailed": {
+    "zh": "读取语言设置失败，暂时跟随系统。",
+    "en": "Could not load the language setting. Using the system language."
+  },
+  "languageRetry": {
+    "zh": "重试",
+    "en": "Retry"
+  },
+  "m0545": {
+    "zh": "保存语言设置失败：{0}",
+    "en": "Could not save language setting: {0}"
+  },
+  "m0546": {
+    "zh": "用于本机所有账号，不改变笔记内容。",
+    "en": "Applies to all accounts on this device, without changing note content."
+  },
+  "m0547": {
+    "zh": "跟随系统",
+    "en": "Follow system"
+  },
+  "m0548": {
+    "zh": "简体中文",
+    "en": "简体中文 (Chinese)"
+  },
+  "deepHtml": {
+    "zh": "[嵌套内容过深，请查看原文]",
+    "en": "[Content is nested too deeply. View the source.]"
+  },
+  "largeTable": {
+    "zh": "\n[复杂或大型表格按文字显示，可查看原文]\n",
+    "en": "\n[Complex or large table shown as text. View the source for details.]\n"
+  },
+  "missingMedia": {
+    "zh": "[媒体尚未缓存{0}]",
+    "en": "[Media not cached{0}]"
+  },
+  "invalidImageAddress": {
+    "zh": "图片地址无效",
+    "en": "Invalid image address"
+  },
+  "tableCursorOutside": {
+    "zh": "请先将光标移到表格外，避免嵌套表格",
+    "en": "Move the cursor outside the table first to avoid nesting tables."
+  },
+  "tableChanged": {
+    "zh": "表格已变化，请重新选择单元格后重试",
+    "en": "The table has changed. Select a cell again and retry."
+  },
+  "markdownTableTemplate": {
+    "zh": "| 标题 1 | 标题 2 |\n| --- | --- |\n| 内容 1 | 内容 2 |",
+    "en": "| Heading 1 | Heading 2 |\n| --- | --- |\n| Content 1 | Content 2 |"
+  },
+  "sortUpdatedDescending": {
+    "zh": "修改时间：新到旧",
+    "en": "Modified: newest first"
+  },
+  "sortUpdatedAscending": {
+    "zh": "修改时间：旧到新",
+    "en": "Modified: oldest first"
+  },
+  "sortCreatedDescending": {
+    "zh": "创建时间：降序",
+    "en": "Created: newest first"
+  },
+  "sortCreatedAscending": {
+    "zh": "创建时间：升序",
+    "en": "Created: oldest first"
+  },
+  "sortTitleAscending": {
+    "zh": "标题：升序",
+    "en": "Title: ascending"
+  },
+  "sortTitleDescending": {
+    "zh": "标题：降序",
+    "en": "Title: descending"
+  },
+  "uploadPending": {
+    "zh": "待上传",
+    "en": "Waiting to upload"
+  },
+  "uploadUncertain": {
+    "zh": "上传结果待确认",
+    "en": "Upload result unconfirmed"
+  },
+  "uploadConfirmed": {
+    "zh": "已上传，本地副本保留",
+    "en": "Uploaded; local copy kept"
+  },
+  "uploadInserted": {
+    "zh": "已插入本地正文",
+    "en": "Inserted in local body"
+  },
+  "uploadInvalidState": {
+    "zh": "状态异常，请导出保留",
+    "en": "Unexpected status; export the original to keep it"
+  },
+  "m0565": {
+    "zh": "文件尚未缓存或缓存已失效，请联网下载",
+    "en": "File is not cached or its cache has expired. Download it online."
+  },
+  "m0566": {
+    "zh": "文件列表已变化，请刷新后重试",
+    "en": "The file list has changed. Refresh and retry."
+  },
+  "m0567": {
+    "zh": "共享列表已变化，请刷新后重试",
+    "en": "The shared list has changed. Refresh and retry."
+  },
+  "m0568": {
+    "zh": "此共享正文尚未缓存或已失效，请联网刷新后查看",
+    "en": "This shared body is not cached or has expired. Refresh online to view it."
+  },
+  "m0569": {
+    "zh": "请先核实笔记本创建结果，再修改名称或位置",
+    "en": "Verify the notebook creation result before changing its name or location."
+  },
+  "m0570": {
+    "zh": "目标笔记本无效，不能移到自身、子级或循环层级下",
+    "en": "Invalid destination: a notebook cannot be moved into itself, a descendant or a cyclic hierarchy."
+  },
+  "m0571": {
+    "zh": "笔记已变化或不可用，请重新打开后复制",
+    "en": "The note changed or is unavailable. Reopen it before copying."
+  },
+  "m0572": {
+    "zh": "目标笔记本不存在，请刷新后重试",
+    "en": "The destination notebook does not exist. Refresh and retry."
+  },
+  "m0573": {
+    "zh": "暂不支持复制含链接、图片、附件或复杂 HTML 的笔记",
+    "en": "Copying notes with links, images, attachments or complex HTML is not yet supported."
+  },
+  "m0574": {
+    "zh": "当前服务端接口不支持清空全部标签，请至少保留一个标签",
+    "en": "The current server API cannot clear all tags. Keep at least one tag."
+  },
+  "m0575": {
+    "zh": "此历史正文尚未缓存，请联网查看后再离线使用",
+    "en": "This historical body is not cached. View it online before using it offline."
+  },
+  "m0576": {
+    "zh": "不能向不存在或回收站中的笔记添加附件",
+    "en": "Cannot add attachments to a missing or trashed note."
+  },
+  "m0577": {
+    "zh": "本地附件暂存已满（最多 64 个、合计 64 MiB），请先处理或导出已有附件",
+    "en": "Local attachment staging is full (64 files, 64 MiB total). Process or export existing attachments first."
+  },
+  "m0578": {
+    "zh": "本地附件不存在",
+    "en": "Local attachment not found"
+  },
+  "m0579": {
+    "zh": "附件任务状态已变化，请刷新",
+    "en": "The attachment task changed. Refresh to continue."
+  },
+  "m0580": {
+    "zh": "本地图片任务不存在",
+    "en": "Local image task not found"
+  },
+  "m0581": {
+    "zh": "图片上传结果尚未确认",
+    "en": "Image upload result is not confirmed"
+  },
+  "m0582": {
+    "zh": "原笔记不存在或已在回收站，图片原件仍保留",
+    "en": "The original note is missing or in trash. The original image is kept."
+  },
+  "m0583": {
+    "zh": "历史正文缓存已变化，请重新打开历史版本",
+    "en": "The cached historical body changed. Reopen the history version."
+  },
+  "m0584": {
+    "zh": "图片缓存已清理或历史列表已更新，请重试",
+    "en": "The image cache was cleared or the history list was updated. Please retry."
+  },
+  "m0585": {
+    "zh": "父笔记本已不存在",
+    "en": "The parent notebook no longer exists."
+  },
+  "m0586": {
+    "zh": "笔记本创建结果待确认，请从笔记本菜单核实恢复，不会自动重复创建",
+    "en": "Notebook creation is unconfirmed. Use its menu to check and recover; creation will not repeat automatically."
+  },
+  "m0587": {
+    "zh": "请先同步父笔记本",
+    "en": "Sync the parent notebook first."
+  },
+  "m0588": {
+    "zh": "笔记本任务状态已变化，请刷新",
+    "en": "The notebook task changed. Refresh to continue."
+  },
+  "m0589": {
+    "zh": "笔记本创建结果与本地内容不一致，请核实恢复",
+    "en": "The notebook creation result differs from local content. Verify it before recovery."
+  },
+  "m0590": {
+    "zh": "目标笔记本已有未同步修改或更新版本，请先处理",
+    "en": "The destination notebook has pending changes or a newer version. Resolve those first."
+  },
+  "m0591": {
+    "zh": "共享资源缓存已失效，请刷新列表",
+    "en": "The shared resource cache expired. Refresh the list."
+  },
+  "m0592": {
+    "zh": "共享缓存已清理或列表已刷新",
+    "en": "The shared cache was cleared or its list was refreshed."
+  },
+  "m0593": {
+    "zh": "附件文件名无效",
+    "en": "Invalid attachment filename"
+  },
+  "m0594": {
+    "zh": "附件必须非空且不超过 32 MiB",
+    "en": "Attachments must be nonempty and no larger than 32 MiB."
+  },
+  "m0595": {
+    "zh": "不支持下载此图片地址",
+    "en": "Downloading from this image address is not supported."
+  },
+  "m0596": {
+    "zh": "图片不属于当前笔记，请同步后重试",
+    "en": "The image does not belong to this note. Sync and retry."
+  },
+  "m0597": {
+    "zh": "请先同步此笔记，再上传图片",
+    "en": "Sync this note before uploading an image."
+  },
+  "m0598": {
+    "zh": "请先同步此笔记，再上传附件",
+    "en": "Sync this note before uploading an attachment."
+  },
+  "m0599": {
+    "zh": "请等待当前同步或上传完成",
+    "en": "Wait for the current sync or upload to finish."
+  },
+  "m0600": {
+    "zh": "图片不是待上传状态，请先核实已有结果",
+    "en": "The image is not awaiting upload. Verify the existing result first."
+  },
+  "m0601": {
+    "zh": "附件不是待上传状态，请先核实已有结果",
+    "en": "The attachment is not awaiting upload. Verify the existing result first."
+  },
+  "m0602": {
+    "zh": "图片不属于此历史版本",
+    "en": "The image does not belong to this history version."
+  },
+  "m0603": {
+    "zh": "请填写登录账号、当前密码和新用户名",
+    "en": "Enter your account, current password and new username."
+  },
+  "m0604": {
+    "zh": "请填写当前账号、密码及有效的新邮箱",
+    "en": "Enter your current account, password and a valid new email."
+  },
+  "m0605": {
+    "zh": "请填写当前账号、当前密码及新密码",
+    "en": "Enter your current account, current password and new password."
+  },
+  "m0606": {
+    "zh": "该笔记本没有待核实的创建请求",
+    "en": "This notebook has no creation request awaiting verification."
+  },
+  "m0607": {
+    "zh": "请等待当前同步完成",
+    "en": "Wait for the current sync to finish."
+  },
+  "m0608": {
+    "zh": "标签名称需为 1–200 个字符，且不能包含换行或控制字符",
+    "en": "Tag names must be 1–200 characters without line breaks or control characters."
+  },
+  "m0609": {
+    "zh": "此分享已指定其他账号",
+    "en": "This share is assigned to another account."
+  },
+  "m0610": {
+    "zh": "分享资源不完整",
+    "en": "Shared resource is incomplete."
+  },
+  "m0611": {
+    "zh": "只能复制当前账号的个人笔记",
+    "en": "Only personal notes in the current account can be copied."
+  },
+  "m0612": {
+    "zh": "暂不支持复制带图片或附件的笔记",
+    "en": "Copying notes with images or attachments is not yet supported."
+  },
+  "m0613": {
+    "zh": "附件超过 32 MiB",
+    "en": "Attachment exceeds 32 MiB."
+  },
+  "m0614": {
+    "zh": "附件不能超过 32 MiB",
+    "en": "Attachments cannot exceed 32 MiB."
+  },
+  "m0615": {
+    "zh": "无效的分享位置",
+    "en": "Invalid share position"
+  },
+  "m0616": {
+    "zh": "当前平台暂不支持拍照",
+    "en": "Taking pictures is not supported on this platform yet."
+  },
+  "m0617": {
+    "zh": "头像不能超过 2 MiB",
+    "en": "Profile pictures cannot exceed 2 MiB."
+  },
+  "m0618": {
+    "zh": "头像大小无效",
+    "en": "Invalid profile picture size"
+  },
+  "m0619": {
+    "zh": "请选择有效的 PNG、JPEG、WebP、GIF 或 BMP 图片",
+    "en": "Choose a valid PNG, JPEG, WebP, GIF or BMP image."
+  },
+  "m0620": {
+    "zh": "头像尺寸不能超过 4096×4096",
+    "en": "Profile picture dimensions cannot exceed 4096×4096."
+  },
+  "m0621": {
+    "zh": "无法处理头像",
+    "en": "Could not process profile picture."
+  },
+  "m0622": {
+    "zh": "小组件入口无效",
+    "en": "Invalid widget action"
+  },
+  "m0623": {
+    "zh": "小组件尚未就绪",
+    "en": "The widget is not ready yet."
+  },
+  "m0624": {
+    "zh": "图片大小不支持",
+    "en": "Unsupported image size"
+  },
+  "m0625": {
+    "zh": "不支持的图片格式",
+    "en": "Unsupported image format"
+  },
+  "m0626": {
+    "zh": "笔记原文超过 32 MiB，暂不支持导出",
+    "en": "Note source exceeds the 32 MiB export limit."
+  },
+  "m0627": {
+    "zh": "图片必须非空且不超过 8 MiB",
+    "en": "Images must be nonempty and no larger than 8 MiB."
+  },
+  "m0628": {
+    "zh": "请选择 PNG 或 JPEG 图片",
+    "en": "Choose a PNG or JPEG image."
+  },
+  "m0629": {
+    "zh": "图片尺寸不能超过 4096×4096",
+    "en": "Image dimensions cannot exceed 4096×4096."
+  },
+  "m0630": {
+    "zh": "转换后的 PNG 图片不能超过 8 MiB",
+    "en": "The converted PNG cannot exceed 8 MiB."
+  },
+  "m0631": {
+    "zh": "图片不能超过 8 MiB",
+    "en": "Images cannot exceed 8 MiB."
+  },
+  "m0632": {
+    "zh": "仅支持 Markdown、TXT 或 HTML 文件",
+    "en": "Only Markdown, TXT and HTML files are supported."
+  },
+  "m0633": {
+    "zh": "文件超过 32 MiB",
+    "en": "File exceeds 32 MiB."
+  },
+  "m0634": {
+    "zh": "不支持二进制内容，请选择 UTF-8 文本",
+    "en": "Binary content is not supported. Choose UTF-8 text."
+  },
+  "m0635": {
+    "zh": "此地址不支持外部打开",
+    "en": "This address cannot be opened externally."
+  },
+  "m0636": {
+    "zh": "未能打开外部应用",
+    "en": "Could not open an external app."
+  },
+  "m0637": {
+    "zh": "分享文本超过 256 KiB，请使用导出原文",
+    "en": "Shared text exceeds 256 KiB. Export the source instead."
+  },
+  "m0638": {
+    "zh": "分享文本无效或超过 256 KiB",
+    "en": "Shared text is invalid or exceeds 256 KiB."
+  },
+  "m0639": {
+    "zh": "分享资源信息无效或超过 32 MiB",
+    "en": "Shared resource metadata is invalid or exceeds 32 MiB."
+  },
+  "m0640": {
+    "zh": "分享资源类型缺失",
+    "en": "Shared resource type is missing."
+  },
+  "m0641": {
+    "zh": "分享不包含资源",
+    "en": "The share contains no resource."
+  },
+  "m0642": {
+    "zh": "分享资源不完整，请重新分享",
+    "en": "Shared resource is incomplete. Share it again."
+  },
+  "m0643": {
+    "zh": "不能向已删除或回收站笔记上传附件",
+    "en": "Cannot upload attachments to a deleted or trashed note."
+  },
+  "m0644": {
+    "zh": "上传正文期间笔记又有修改，请保存后重试",
+    "en": "The note changed while uploading its body. Save and retry."
+  },
+  "m0645": {
+    "zh": "笔记本存在远端冲突，本地修改已保留；请在笔记本菜单中选择“核对远端修改”",
+    "en": "The notebook has remote changes. Local edits are preserved. Choose “Review remote changes” in the notebook menu."
+  },
+  "m0646": {
+    "zh": "新笔记创建结果与原请求不一致，本地修改已保留；请在笔记菜单选择“核对新建结果”",
+    "en": "The created note differs from the original request. Local changes are preserved. Choose Review note creation in the note menu."
+  },
+  "m0647": {
+    "zh": "无法生成头像",
+    "en": "Could not create profile picture."
+  },
+  "m0648": {
+    "zh": "不支持此表格格式",
+    "en": "Unsupported table format"
+  },
+  "m0649": {
+    "zh": "请选择表格单元格",
+    "en": "Select a table cell."
+  },
+  "m0650": {
+    "zh": "表格快照包含额外内容",
+    "en": "The table snapshot contains extra content."
+  },
+  "m0651": {
+    "zh": "仅支持最多 20 行的非嵌套表格",
+    "en": "Only non-nested tables with up to 20 rows are supported."
+  },
+  "m0652": {
+    "zh": "单元格位置已失效，请重新选择",
+    "en": "The cell position is no longer valid. Select it again."
+  },
+  "m0653": {
+    "zh": "表格包含非单元格内容",
+    "en": "The table contains content outside its cells."
+  },
+  "m0654": {
+    "zh": "合并单元格超出表格边界或跨越表头分区",
+    "en": "A merged cell extends beyond the table or crosses a table section."
+  },
+  "m0655": {
+    "zh": "合并单元格重叠",
+    "en": "Merged cells overlap."
+  },
+  "m0656": {
+    "zh": "表格存在缺失单元格",
+    "en": "The table has missing cells."
+  },
+  "m0657": {
+    "zh": "最多支持 20 行",
+    "en": "At most 20 rows are supported."
+  },
+  "m0658": {
+    "zh": "最多支持 10 列",
+    "en": "At most 10 columns are supported."
+  },
+  "m0659": {
+    "zh": "不能删除最后一行",
+    "en": "Cannot delete the last row."
+  },
+  "m0660": {
+    "zh": "不能删除最后一列",
+    "en": "Cannot delete the last column."
+  },
+  "m0661": {
+    "zh": "右侧单元格高度不一致，无法合并",
+    "en": "Cannot merge: the cell on the right has a different height."
+  },
+  "m0662": {
+    "zh": "下方单元格宽度或分区不一致，无法合并",
+    "en": "Cannot merge: the cell below has a different width or table section."
+  },
+  "m0663": {
+    "zh": "当前单元格未合并",
+    "en": "The selected cell is not merged."
+  },
+  "m0664": {
+    "zh": "复制到我的笔记本",
+    "en": "Copy to my notebook"
+  },
+  "m0665": {
+    "zh": "共享笔记已复制",
+    "en": "Shared note copied"
+  },
+  "m0666": {
+    "zh": "复制共享笔记失败：{0}",
+    "en": "Could not copy shared note: {0}"
+  },
+  "m0667": {
+    "zh": "删除标签",
+    "en": "Delete tag"
+  },
+  "m0668": {
+    "zh": "从所有笔记中删除标签“{0}”？",
+    "en": "Remove tag “{0}” from every note?"
+  },
+  "m0669": {
+    "zh": "删除标签失败：{0}",
+    "en": "Could not delete tag: {0}"
+  },
+  "m0670": {
+    "zh": "重命名标签",
+    "en": "Rename tag"
+  },
+  "m0671": {
+    "zh": "重命名标签失败：{0}",
+    "en": "Could not rename tag: {0}"
+  },
+  "m0672": {
+    "zh": "删除笔记本",
+    "en": "Delete notebook"
+  },
+  "m0673": {
+    "zh": "删除空笔记本“{0}”？",
+    "en": "Delete empty notebook “{0}”?"
+  },
+  "m0674": {
+    "zh": "删除笔记本失败：{0}",
+    "en": "Could not delete notebook: {0}"
+  },
+  "errorSharedUpdated": {
+    "zh": "共享笔记已更新，请刷新列表后重试",
+    "en": "The shared note has changed. Refresh the list and retry."
+  },
+  "errorWidgetInit": {
+    "zh": "小组件初始化失败：{0}",
+    "en": "Could not initialize widget: {0}"
+  },
+  "errorWidgetRefresh": {
+    "zh": "刷新小组件失败：{0}",
+    "en": "Could not refresh widget: {0}"
+  },
+  "errorWidgetRead": {
+    "zh": "读取小组件操作失败：{0}",
+    "en": "Could not read widget action: {0}"
+  },
+  "errorShareRead": {
+    "zh": "读取待处理分享失败：{0}",
+    "en": "Could not read pending share: {0}"
+  },
+  "errorNoFileApp": {
+    "zh": "没有可打开此附件的应用，请安装对应应用或使用保存、分享",
+    "en": "No app can open this attachment. Install one, or save or share the file."
+  },
+  "errorFilePermission": {
+    "zh": "系统拒绝打开附件，请使用保存或分享",
+    "en": "The system refused to open the attachment. Save or share it instead."
+  },
+  "errorFileMissing": {
+    "zh": "临时附件已失效，请重新打开",
+    "en": "The temporary attachment has expired. Open it again."
+  },
+  "errorFileOpen": {
+    "zh": "无法打开附件，请重试或使用保存、分享",
+    "en": "Could not open attachment. Retry, or save or share it instead."
+  },
+  "fileLabel0": {
+    "zh": "选择头像",
+    "en": "Choose avatar"
+  },
+  "fileLabel1": {
+    "zh": "选择正文图片",
+    "en": "Choose note image"
+  },
+  "fileLabel2": {
+    "zh": "选择附件",
+    "en": "Choose attachment"
+  },
+  "fileLabel4": {
+    "zh": "导入的笔记",
+    "en": "Imported note"
+  },
+  "fileLabel5": {
+    "zh": "导出笔记",
+    "en": "Export note"
+  },
+  "fileLabel8": {
+    "zh": "未命名笔记",
+    "en": "Untitled note"
+  },
+  "fileLabel10": {
+    "zh": "附件",
+    "en": "Attachment"
+  },
+  "nativeError0": {
+    "zh": "分享已不存在",
+    "en": "This share no longer exists"
+  },
+  "nativeError2": {
+    "zh": "无法保存分享状态",
+    "en": "Could not save share status"
+  },
+  "nativeError3": {
+    "zh": "无法清除分享状态",
+    "en": "Could not clear share status"
+  },
+  "nativeError4": {
+    "zh": "此分享尚未指定当前账号",
+    "en": "This share has not been assigned to this account"
+  },
+  "nativeError5": {
+    "zh": "分享不包含资源文件",
+    "en": "This share contains no resource file"
+  },
+  "nativeError6": {
+    "zh": "无法识别分享类型",
+    "en": "Unrecognized share type"
+  },
+  "nativeError7": {
+    "zh": "每次最多接收 8 项分享",
+    "en": "Receive up to 8 items at a time"
+  },
+  "nativeError8": {
+    "zh": "无法识别分享文本",
+    "en": "Unrecognized shared text"
+  },
+  "nativeError9": {
+    "zh": "单项分享包含多项内容",
+    "en": "Single-item share contains multiple items"
+  },
+  "nativeError10": {
+    "zh": "每次需要分享 1–8 项文本或文本文件",
+    "en": "Share between 1 and 8 items"
+  },
+  "nativeError11": {
+    "zh": "单项分享包含多个文件，请使用多项分享",
+    "en": "Use multiple-item sharing for multiple files"
+  },
+  "nativeError12": {
+    "zh": "分享包含未识别的额外文件",
+    "en": "Share contains unrecognized extra files"
+  },
+  "nativeError13": {
+    "zh": "无法识别分享文件",
+    "en": "Unrecognized shared file"
+  },
+  "nativeError14": {
+    "zh": "正在读取其他分享，请稍后重试",
+    "en": "Reading another share. Try again later"
+  },
+  "nativeError15": {
+    "zh": "分享读取已结束",
+    "en": "Share reading has ended"
+  },
+  "nativeError16": {
+    "zh": "分享文件必须使用授权的 content URI",
+    "en": "Shared files require an authorized content URI"
+  },
+  "nativeError17": {
+    "zh": "不能通过外部分享读取应用内部文件",
+    "en": "External sharing cannot read internal app files"
+  },
+  "nativeError18": {
+    "zh": "无法读取分享文件",
+    "en": "Could not read shared file"
+  },
+  "nativeError19": {
+    "zh": "读取分享超时，未保存，请重试",
+    "en": "Share reading timed out. Nothing saved; try again"
+  },
+  "nativeError20": {
+    "zh": "待处理分享容量不足，请先处理应用中的分享",
+    "en": "Share inbox is full. Handle pending shares first"
+  },
+  "nativeError21": {
+    "zh": "无法保存分享内容",
+    "en": "Could not save shared content"
+  },
+  "nativeError22": {
+    "zh": "无法读取分享内容",
+    "en": "Could not read shared content"
+  },
+  "nativeError23": {
+    "zh": "相机正在使用中",
+    "en": "Camera is busy"
+  },
+  "nativeError24": {
+    "zh": "没有可用的相机应用",
+    "en": "No camera app is available"
+  },
+  "nativeError25": {
+    "zh": "拍摄照片超过 16 MiB 或无效",
+    "en": "Captured photo is invalid or exceeds 16 MiB"
+  },
+  "nativeError26": {
+    "zh": "拍摄照片尺寸过大或无效",
+    "en": "Captured photo dimensions are invalid or too large"
+  },
+  "nativeError27": {
+    "zh": "无法读取拍摄照片",
+    "en": "Could not read captured photo"
+  },
+  "nativeLanguageFailed": {
+    "zh": "Android 入口语言未更新，请重试。",
+    "en": "Android entry points could not update their language. Retry."
+  },
+  "nativeStorageError0": {
+    "zh": "读取分享已取消",
+    "en": "Share reading cancelled"
+  },
+  "nativeStorageError1": {
+    "zh": "分享文本超过 256 KiB",
+    "en": "Shared text exceeds 256 KiB"
+  },
+  "nativeStorageError2": {
+    "zh": "分享内容必须为非空文本",
+    "en": "Shared text must not be empty"
+  },
+  "nativeStorageError3": {
+    "zh": "无法创建分享暂存目录",
+    "en": "Could not create share storage"
+  },
+  "nativeStorageError4": {
+    "zh": "无效的分享 ID",
+    "en": "Invalid share ID"
+  },
+  "nativeStorageError5": {
+    "zh": "分享 ID 重复",
+    "en": "Duplicate share ID"
+  },
+  "nativeStorageError6": {
+    "zh": "分享读取已取消",
+    "en": "Share reading cancelled"
+  },
+  "nativeStorageError7": {
+    "zh": "分享附件不能超过 32 MiB",
+    "en": "Shared attachment exceeds 32 MiB"
+  },
+  "nativeStorageError8": {
+    "zh": "无法读取分享暂存目录",
+    "en": "Could not read share storage"
+  },
+  "nativeStorageError9": {
+    "zh": "分享暂存空间已满，请先处理待导入分享",
+    "en": "Share storage is full. Handle pending shares first"
+  },
+  "nativeStorageError10": {
+    "zh": "分享文件为空或读取已取消",
+    "en": "Shared file is empty or reading was cancelled"
+  },
+  "nativeStorageError11": {
+    "zh": "无法移除分享暂存文件",
+    "en": "Could not remove stored share"
+  },
+  "nativeStorageError12": {
+    "zh": "分享文件大小无效",
+    "en": "Invalid shared file size"
+  },
+  "nativeStorageError13": {
+    "zh": "分享文件不完整，请重新分享",
+    "en": "Shared file is incomplete. Share it again"
+  },
+  "nativeStorageError14": {
+    "zh": "分享文件不完整",
+    "en": "Shared file is incomplete"
+  },
+  "nativeStorageError15": {
+    "zh": "分享文件已变化",
+    "en": "Shared file changed"
+  },
+  "notebookReviewTitle": {
+    "zh": "核对远端修改",
+    "en": "Review remote changes"
+  },
+  "notebookReviewIntro": {
+    "zh": "先读取远端名称和位置，再决定保留哪一方。打开此窗口不会联网或修改数据。",
+    "en": "Read the remote name and location before choosing which to keep. Opening this dialog does not connect or change data."
+  },
+  "notebookLocalVersion": {
+    "zh": "本地待同步",
+    "en": "Pending local changes"
+  },
+  "notebookRemoteVersion": {
+    "zh": "远端当前值",
+    "en": "Current remote values"
+  },
+  "notebookReviewFetch": {
+    "zh": "读取远端并核对",
+    "en": "Read remote values"
+  },
+  "notebookReviewLocation": {
+    "zh": "位置：{0}",
+    "en": "Location: {0}"
+  },
+  "notebookReviewVersion": {
+    "zh": "版本：{0}",
+    "en": "Version: {0}"
+  },
+  "notebookRoot": {
+    "zh": "根目录",
+    "en": "Root"
+  },
+  "notebookKeepLocal": {
+    "zh": "保留本地修改",
+    "en": "Keep local changes"
+  },
+  "notebookUseRemote": {
+    "zh": "采用远端修改",
+    "en": "Use remote changes"
+  },
+  "notebookKeepConfirm": {
+    "zh": "将本地名称和位置保留为待同步修改，基于刚核对的远端版本重试。下一次同步才上传，若远端再次变化会重新报告冲突。笔记正文与子级不变。",
+    "en": "Keep the local name and location pending against the reviewed remote version. The next sync will upload them; further remote changes will cause another conflict. Note content and children are preserved."
+  },
+  "notebookRemoteConfirm": {
+    "zh": "放弃这个笔记本待同步的名称和位置，采用已核对的远端值，并刷新所需且没有本地修改的父级。笔记正文和其它待同步修改保留。",
+    "en": "Discard this notebook’s pending name and location, use the reviewed remote values, and refresh required parents that have no local edits. Note content and other pending changes are preserved."
+  },
+  "notebookReviewFailed": {
+    "zh": "核对失败：{0}",
+    "en": "Review failed: {0}"
+  },
+  "notebookConflictAccount": {
+    "zh": "账号已变化，请关闭后重新打开。",
+    "en": "Account changed. Close and reopen this dialog."
+  },
+  "notebookConflictLocalChanged": {
+    "zh": "本地笔记本已变化或没有待处理修改，请关闭后重新核对。",
+    "en": "The local notebook changed or has no pending changes. Close and review again."
+  },
+  "notebookConflictRemoteUnavailable": {
+    "zh": "远端笔记本已删除、不可用或版本回退。本地修改已保留；暂不能采用该远端状态，请先在服务端核实。",
+    "en": "The remote notebook was deleted, is unavailable, or its version went backwards. Local changes are preserved. Verify it on the server before resolving."
+  },
+  "notebookConflictInvalidSnapshot": {
+    "zh": "远端笔记本数据无效，未修改本地数据。",
+    "en": "Remote notebook data is invalid. Local data was not changed."
+  },
+  "notebookConflictRemoteChanged": {
+    "zh": "远端笔记本或父级再次变化，请重新读取并核对。",
+    "en": "The remote notebook or its parents changed again. Read and review them again."
+  },
+  "notebookConflictHierarchy": {
+    "zh": "所选位置缺失或会形成循环。未修改数据，请先核对父级的待同步修改。",
+    "en": "The selected location is missing or would create a cycle. No data changed. Review pending parent changes first."
+  },
+  "visualInsertImage": {
+    "zh": "在选区后插入图片",
+    "en": "Insert image after selection"
+  },
+  "visualImageModeTitle": {
+    "zh": "插入图片",
+    "en": "Insert image"
+  },
+  "visualImageOffline": {
+    "zh": "离线插入，稍后上传",
+    "en": "Insert offline, upload later"
+  },
+  "visualImageUpload": {
+    "zh": "立即上传",
+    "en": "Upload now"
+  },
+  "noteCreationTitle": {
+    "zh": "核对新建结果",
+    "en": "Review note creation"
+  },
+  "noteCreationIntro": {
+    "zh": "适用于创建请求结果与本地内容不一致的笔记。联网读取远端版本并核对正文和属性；读取不会修改任何一端。",
+    "en": "For notes whose creation result differs from local content. Fetch the remote version to review its source and properties. Fetching changes neither version."
+  },
+  "noteCreationKeep": {
+    "zh": "保留本地并恢复同步",
+    "en": "Keep local and resume sync"
+  },
+  "noteCreationConfirm": {
+    "zh": "确认以本地正文和属性为准？下一次同步将使用已核对的远端版本更新同一篇笔记，覆盖远端正文和属性，并保留远端附件及本地待上传资源。现在只记录恢复选择，不立即上传。",
+    "en": "Use the local source and properties? The next sync will update the same note using the reviewed remote version, replacing its source and properties while retaining remote attachments and pending local resources. This records your choice without uploading now."
+  },
+  "noteCreationDetails": {
+    "zh": "笔记本：{0}\n版本：{1} · {2}\n标签：{3}\n{4}",
+    "en": "Notebook: {0}\nVersion: {1} · {2}\nTags: {3}\n{4}"
+  },
+  "noteCreationStarred": {
+    "zh": "已星标",
+    "en": "Starred"
+  },
+  "noteCreationUnstarred": {
+    "zh": "未星标",
+    "en": "Not starred"
+  },
+  "noteCreationSource": {
+    "zh": "查看完整原文",
+    "en": "View full source"
+  },
+  "noteCreationAccount": {
+    "zh": "账号已变化，请关闭后重新核对。",
+    "en": "Account changed. Close and review again."
+  },
+  "noteCreationLocalChanged": {
+    "zh": "本地笔记已变化或不再需要创建恢复，请重新核对。",
+    "en": "The local note changed or no longer needs creation recovery. Review again."
+  },
+  "noteCreationRemoteChanged": {
+    "zh": "远端笔记已变化，请重新读取并核对。",
+    "en": "The remote note changed. Fetch and review again."
+  },
+  "noteCreationUnavailable": {
+    "zh": "远端笔记不可用、已删除或在回收站中。本地内容已保留。",
+    "en": "The remote note is unavailable, deleted, or in trash. Local content is preserved."
+  },
+  "noteCreationTags": {
+    "zh": "服务端暂不支持清空全部标签。本地内容已保留，请先核对并调整两端标签后重试。",
+    "en": "The server cannot clear all tags. Local content is preserved. Review and adjust the tags before retrying."
+  },
+  "noteCreationFailed": {
+    "zh": "核对未完成，本地内容已保留：{0}",
+    "en": "Review failed. Local content is preserved: {0}"
+  },
+  "bundleExport": {
+    "zh": "导出笔记与资源",
+    "en": "Export note with resources"
+  },
+  "bundleApplyReferences": {
+    "zh": "更新正文引用",
+    "en": "Update body references"
+  },
+  "bundleImportInfo": {
+    "zh": "包含 {0} 个资源原件，将存入待上传队列。外部链接保持原文，不下载外部网站。",
+    "en": "Includes {0} resource originals, saved to the upload queue. External links remain unchanged; external websites are not downloaded."
+  },
+  "noteBundleTooLarge": {
+    "zh": "资源归档超过限制：原文 8 MiB，资源共 32 MiB、最多 64 项。",
+    "en": "Bundle exceeds limits: 8 MiB source, 32 MiB resources, up to 64 resources."
+  },
+  "noteBundleChanged": {
+    "zh": "笔记或资源已变化，请重新打开后重试。",
+    "en": "The note or resources changed. Reopen and retry."
+  },
+  "noteBundleMissingResource": {
+    "zh": "缺少正文中的图片原件，请先下载图片后重试。",
+    "en": "An original body image is missing. Download the image and retry."
+  },
+  "invalidNoteBundle": {
+    "zh": "笔记归档格式或版本无效。",
+    "en": "Invalid note archive format or version."
+  },
+  "invalidBundleResource": {
+    "zh": "归档中的资源编号无效。",
+    "en": "Invalid resource identifier in archive."
+  },
+  "invalidBundleOrigin": {
+    "zh": "归档中的资源来源无效。",
+    "en": "Invalid resource origin in archive."
+  },
+  "duplicateBundleResource": {
+    "zh": "归档包含重复资源。",
+    "en": "Archive contains duplicate resources."
+  },
+  "bundleChecksumMismatch": {
+    "zh": "资源校验失败，归档可能已损坏。",
+    "en": "Resource checksum failed; the archive may be damaged."
+  },
+  "bundleExportFailed": {
+    "zh": "资源导出未完成：{0}",
+    "en": "Resource export failed: {0}"
+  },
+  "bundleSupportedFiles": {
+    "zh": "仅支持 Markdown、TXT、HTML、RTF、DOCX 或 .gemsnote 资源归档",
+    "en": "Only Markdown, TXT, HTML, RTF, DOCX or .gemsnote archives are supported."
+  },
+  "bundleFileLimit": {
+    "zh": "文件超过允许大小：{0} 字节",
+    "en": "File exceeds the allowed size: {0} bytes"
+  },
+  "notebookHasPendingChanges": {
+    "zh": "笔记本已有变化或待同步修改，请同步后重试",
+    "en": "The notebook changed or has pending changes. Sync and retry."
+  },
+  "notebookHasChildren": {
+    "zh": "请先移动或删除子笔记本",
+    "en": "Move or delete child notebooks first."
+  },
+  "notebookNotEmpty": {
+    "zh": "请先移走笔记本中的笔记并同步待处理修改",
+    "en": "Move notes out of this notebook and sync pending changes first."
+  },
+  "unsyncedChanges": {
+    "zh": "请先同步待处理的笔记修改，再删除标签",
+    "en": "Sync pending note changes before deleting a tag."
+  },
+  "tagRenameIncomplete": {
+    "zh": "部分笔记仍使用旧标签，请同步后重试重命名",
+    "en": "Some notes still use the old tag. Sync and retry the rename."
+  },
+  "tagMissing": {
+    "zh": "同步目录中没有此标签，请同步后重试",
+    "en": "This tag is missing from the synced catalog. Sync and retry."
+  },
+  "historyRestoreFull": {
+    "zh": "恢复正文和附件",
+    "en": "Restore body and attachments"
+  },
+  "historyRestoreFullConfirm": {
+    "zh": "联网恢复此版本的正文、编辑器格式和附件集合。请先同步笔记并处理待上传附件；当前版本会保存在历史中。",
+    "en": "Restore this version’s body, editor format and attachments online. Sync note edits and finish pending uploads first. The current version will be saved in history."
+  },
+  "historyPendingNote": {
+    "zh": "请先同步笔记修改，再恢复完整历史版本",
+    "en": "Sync note edits before restoring a complete version."
+  },
+  "historyPendingFiles": {
+    "zh": "请先处理待上传附件，再恢复完整历史版本",
+    "en": "Finish pending attachment uploads before restoring a complete version."
+  },
+  "historyFileMissing": {
+    "zh": "历史文件已丢失，无法完整恢复此版本",
+    "en": "A historical file is missing. Nothing was restored."
+  },
+  "historyFilesUnknown": {
+    "zh": "此历史版本缺少完整附件清单，仅支持恢复正文",
+    "en": "This old version has no complete file manifest. Use body-only restore."
+  },
+  "historyRestoreFailed": {
+    "zh": "恢复失败，请刷新笔记并检查历史记录后重试",
+    "en": "Restore failed. Refresh the note and check history before retrying."
+  },
+  "invalidDeepLink": {
+    "zh": "链接格式无效",
+    "en": "The link format is invalid."
+  },
+  "deepLinkReadFailed": {
+    "zh": "无法读取应用链接",
+    "en": "Could not read the app link."
+  },
+  "deepLinkWrongAccount": {
+    "zh": "链接不属于当前服务器或账号",
+    "en": "This link belongs to another server or account."
+  },
+  "deepLinkMissing": {
+    "zh": "链接指向的笔记不存在或无权访问",
+    "en": "The linked note is unavailable or access was removed."
+  },
+  "deepLinkOpenFailed": {
+    "zh": "无法打开链接：{0}",
+    "en": "Could not open link: {0}"
+  },
+  "appLockSetting": {
+    "zh": "应用锁",
+    "en": "App lock"
+  },
+  "appLockSettingDescription": {
+    "zh": "使用生物识别或系统凭据解锁",
+    "en": "Unlock with biometrics or the device credential."
+  },
+  "appLockReason": {
+    "zh": "解锁 Gemsnote",
+    "en": "Unlock Gemsnote"
+  },
+  "appLockEnableReason": {
+    "zh": "验证身份以启用应用锁",
+    "en": "Verify your identity to enable app lock."
+  },
+  "appLockDisableReason": {
+    "zh": "验证身份以关闭应用锁",
+    "en": "Verify your identity to disable app lock."
+  },
+  "appLocked": {
+    "zh": "Gemsnote 已锁定",
+    "en": "Gemsnote is locked"
+  },
+  "appUnlock": {
+    "zh": "解锁",
+    "en": "Unlock"
+  },
+  "appLockUnavailable": {
+    "zh": "此设备未配置可用的生物识别或系统锁屏凭据",
+    "en": "No supported biometric or device credential is configured."
+  },
+  "appLockCancelled": {
+    "zh": "身份验证已取消",
+    "en": "Authentication was cancelled."
+  },
+  "appLockFailed": {
+    "zh": "身份验证失败",
+    "en": "Authentication failed."
+  },
+  "appLockLoadFailed": {
+    "zh": "无法读取应用锁设置，请重试解锁",
+    "en": "Could not read app lock settings. Retry unlocking."
+  },
+  "recoverImage": {"zh": "查询并恢复上传结果", "en": "Recover upload receipt"},
+  "cleanupImage": {"zh": "清理未引用的服务端图片", "en": "Clean up unused server image"},
+  "cleanupImageConfirm": {"zh": "仅清理尚未保存到服务端笔记的图片，并保留本地原件。正文或历史版本已引用的图片不会删除。", "en": "Remove only an unreferenced upload and keep the local original. Images used by saved notes or history will be retained."},
+  "imageCleaned": {"zh": "服务端图片已清理，本地原件保留", "en": "Server image removed; local original retained"},
+  "imageCleaning": {"zh": "图片清理结果待确认，本地原件保留", "en": "Image cleanup pending confirmation; local original retained"},
+  "imageAlreadyReferenced": {"zh": "图片已被笔记或历史版本引用，不能清理", "en": "The image is used by a note or history and cannot be removed."},
+  "imageUploadMissing": {"zh": "未找到该图片的上传回执，请核实后重试", "en": "Upload receipt not found. Check the upload before retrying."},
+  "imageUploadCleaned": {"zh": "此上传已经清理，请用本地原件新建上传任务", "en": "This upload was cleaned up. Create a new upload task from the local original."},
+  "creationKeyDeleted": {"zh": "该笔记本已在服务端删除，请核实本地创建任务", "en": "This notebook was deleted on the server. Review the local creation task."},
+  "creationKeyUnavailable": {"zh": "笔记本创建键不可用，请核实本地创建任务", "en": "Notebook creation key unavailable. Review the local creation task."},
+  "importTarget": {"zh": "导入到：{0}", "en": "Import into: {0}"},
+  "appLockSaveFailed": {
+    "zh": "无法保存应用锁设置",
+    "en": "Could not save the app lock setting."
+  },
+  "notebookExport": {
+    "zh": "导出笔记本（ZIP）",
+    "en": "Export notebook (ZIP)"
+  },
+  "notebookExportFailed": {
+    "zh": "笔记本导出失败：{0}",
+    "en": "Notebook export failed: {0}"
+  },
+  "exportTooLarge": {
+    "zh": "导出内容过大或笔记本层级过深，请分批导出",
+    "en": "The export is too large or deeply nested. Please export smaller notebooks."
+  },
+  "invalidNotebookTree": {
+    "zh": "笔记本层级异常，无法导出",
+    "en": "Cannot export an invalid notebook hierarchy."
+  },
+  "richImportWarning": {
+    "zh": "复杂排版、内嵌图片和对象可能简化；图片以占位文字保留，请核对导入结果。",
+    "en": "Complex layouts, embedded images and objects may be simplified; images are represented by placeholders. Please review the imported note."
+  },
+  "invalidRichDocument": {
+    "zh": "文档损坏或格式不受支持",
+    "en": "The document is damaged or unsupported."
+  },
+  "documentTooComplex": {
+    "zh": "文档内容过大或结构过于复杂",
+    "en": "The document is too large or complex."
+  },
+  "unsupportedRtfEncoding": {
+    "zh": "不支持此 RTF 编码，请另存为 Unicode RTF 或 DOCX 后重试",
+    "en": "This RTF encoding is unsupported. Save as Unicode RTF or DOCX and retry."
+  },
+  "moveCopyShared": {
+    "zh": "移动 / 复制",
+    "en": "Move / Copy"
+  },
+  "sharedMoved": {
+    "zh": "共享笔记已移到所选笔记本，原作者的笔记不变",
+    "en": "Shared note moved to your notebook. The original is unchanged."
+  },
+  "verifyEmail": {
+    "zh": "验证邮箱",
+    "en": "Verify email"
+  },
+  "verifyEmailConfirm": {
+    "zh": "是否向 {0} 重新发送验证邮件？",
+    "en": "Resend a verification email to {0}?"
+  },
+  "sendVerification": {
+    "zh": "发送验证邮件",
+    "en": "Send verification email"
+  },
+  "currentEmail": {
+    "zh": "当前邮箱",
+    "en": "Current email"
+  },
+  "emailUnverified": {
+    "zh": "邮箱未验证",
+    "en": "Email not verified"
+  },
+  "emailVerified": {
+    "zh": "已验证",
+    "en": "Verified"
+  },
+  "pendingEmail": {
+    "zh": "等待验证的新邮箱：{0}",
+    "en": "New email awaiting verification: {0}"
+  },
+  "oldEmailRemainsValid": {
+    "zh": "新邮箱通过验证前，当前邮箱仍然有效。",
+    "en": "Your current email remains valid until the new email is verified."
+  },
+  "mailState_queued": {
+    "zh": "验证邮件已加入发送队列",
+    "en": "Verification email queued"
+  },
+  "mailState_sending": {
+    "zh": "正在发送验证邮件…",
+    "en": "Sending verification email…"
+  },
+  "mailState_sent": {
+    "zh": "验证邮件已发送，请查收",
+    "en": "Verification email sent. Please check your inbox."
+  },
+  "mailState_failed": {
+    "zh": "验证邮件发送失败，请重试或联系管理员",
+    "en": "Verification email failed. Retry or contact your administrator."
+  },
+  "retryMailStatus": {
+    "zh": "重新检查发送状态",
+    "en": "Check delivery status again"
+  },
+  "mailStatusUnavailable": {
+    "zh": "无法读取邮件发送状态，请刷新后重试",
+    "en": "Could not read email delivery status. Refresh and retry."
+  },
+  "manageSharing": {
+    "zh": "共享设置",
+    "en": "Sharing settings"
+  },
+  "sharedWith": {
+    "zh": "已共享给：{0}",
+    "en": "Shared with: {0}"
+  },
+  "shareRecipientEmail": {
+    "zh": "接收用户的邮箱",
+    "en": "Recipient email"
+  },
+  "shareReadOnly": {
+    "zh": "只读共享",
+    "en": "Read-only sharing"
+  },
+  "inheritedShare": {
+    "zh": "随笔记本共享",
+    "en": "Shared through notebook"
+  },
+  "revokeShare": {
+    "zh": "取消共享",
+    "en": "Revoke sharing"
+  },
+  "sharedByMe": {
+    "zh": "我共享的",
+    "en": "Shared by me"
+  },
+  "noOutgoingShares": {
+    "zh": "尚未共享任何笔记",
+    "en": "No notes shared yet"
+  },
+  "sharingRefreshFailed": {
+    "zh": "共享状态刷新失败，以下显示本地缓存：{0}",
+    "en": "Could not refresh sharing. Showing cached data: {0}"
+  },
+  "sharedNotesNotCached": {
+    "zh": "部分笔记尚未下载，请返回后同步",
+    "en": "Some notes are not downloaded yet. Go back and sync."
+  },
+  "emailChangeInvalid": {
+    "zh": "请填写当前密码及有效的新邮箱",
+    "en": "Enter your current password and a valid new email address"
+  },
+  "mailQueueNotConfigured": {
+    "zh": "邮件任务队列未配置，请联系管理员。",
+    "en": "The mail queue is not configured. Contact your administrator."
+  },
+  "mailQueueUnavailable": {
+    "zh": "无法连接邮件任务队列，请联系管理员检查 Redis。",
+    "en": "The mail queue is unavailable. Ask your administrator to check Redis."
+  },
+  "mailNotConfigured": {
+    "zh": "SMTP 配置不完整或无效，请联系管理员。",
+    "en": "SMTP settings are incomplete or invalid. Contact your administrator."
+  },
+  "mailRateLimited": {
+    "zh": "请等待 60 秒后再发送验证邮件。",
+    "en": "Wait 60 seconds before requesting another verification email."
+  },
+  "mailSiteURLInvalid": {
+    "zh": "站点 URL 未正确配置，无法生成验证链接。",
+    "en": "The site URL is invalid. Contact your administrator."
+  },
+  "mailTemplateInvalid": {
+    "zh": "邮件模板未配置或无效，请联系管理员。",
+    "en": "The email template is missing or invalid. Contact your administrator."
+  },
+  "mailTokenFailed": {
+    "zh": "无法创建邮箱验证凭据，请稍后重试。",
+    "en": "Could not create a verification token. Try again later."
+  },
+  "mailTaskNotFound": {
+    "zh": "邮件任务不存在或记录已过期，请重新发送。",
+    "en": "The mail task is missing or expired. Send a new request."
+  },
+  "mailTaskExpired": {
+    "zh": "邮件任务超时或未被处理，请联系管理员检查邮件 worker。",
+    "en": "The mail task timed out. Ask your administrator to check the mail worker."
+  },
+  "mailAuthenticationFailed": {
+    "zh": "邮件发送失败：SMTP 认证失败，请管理员检查用户名和密码。",
+    "en": "SMTP authentication failed. Ask your administrator to check the credentials."
+  },
+  "mailRecipientRejected": {
+    "zh": "邮件发送失败：邮件服务器拒绝收件地址，请检查新邮箱。",
+    "en": "The mail server rejected the recipient. Check the new email address."
+  },
+  "mailConnectionFailed": {
+    "zh": "邮件发送失败：连接邮件服务器失败或超时，请管理员检查 SMTP 配置。",
+    "en": "The mail server connection failed or timed out. Contact your administrator."
+  },
+  "mailDeliveryFailed": {
+    "zh": "邮件发送失败：SMTP 或加密连接异常，请管理员检查邮件服务。",
+    "en": "SMTP or TLS failed. Ask your administrator to check the mail service."
+  },
+  "emailUnchanged": {
+    "zh": "新邮箱不能与当前邮箱相同。",
+    "en": "Enter an address different from your current email."
+  },
+  "invalidEmail": {
+    "zh": "请输入有效的邮箱地址。",
+    "en": "Enter a valid email address."
+  },
+  "wrongPassword": {
+    "zh": "当前密码不正确。",
+    "en": "The current password is incorrect."
+  },
+  "notebookNotSynced": {
+    "zh": "请先同步目标笔记本，再移动或复制共享笔记",
+    "en": "Sync the destination notebook before moving or copying a shared note."
+  },
+  "noteNotShareable": {
+    "zh": "请先同步此笔记；只能共享自己的有效笔记",
+    "en": "Sync this note first. Only your own active notes can be shared."
+  },
+  "shareFailed": {
+    "zh": "共享操作失败，请刷新后重试",
+    "en": "Sharing failed. Refresh and retry."
+  },
+  "sharingLoadFailed": {
+    "zh": "无法读取共享状态，请稍后重试",
+    "en": "Could not load sharing status. Try again later."
+  },
+  "shareRecipientIdentity":{"zh":"用户名或邮箱","en":"Username or email"},
+  "shareRecipientRequired":{"zh":"请输入用户名或邮箱","en":"Enter a username or email"},
+  "mermaidDiagram": {
+    "zh": "Mermaid 图表",
+    "en": "Mermaid diagram"
+  },
+  "mermaidEnlarge": {
+    "zh": "放大图表",
+    "en": "Enlarge diagram"
+  },
+  "mermaidSource": {
+    "zh": "图表源码",
+    "en": "Diagram source"
+  },
+  "mermaidCopy": {
+    "zh": "复制源码",
+    "en": "Copy source"
+  },
+  "mermaidLoading": {
+    "zh": "正在绘制图表…",
+    "en": "Rendering diagram…"
+  },
+  "mermaidFailed": {
+    "zh": "图表无法渲染，请检查语法或图表大小。",
+    "en": "Unable to render diagram. Check the syntax or diagram size."
+  },
+  "syncCancel": {
+    "zh": "取消同步",
+    "en": "Cancel sync"
+  },
+  "syncCancelling": {
+    "zh": "正在取消同步…",
+    "en": "Cancelling sync…"
+  },
+  "syncCancelHint": {
+    "zh": "取消会停止本次同步并暂停自动同步。已保存的数据会保留。",
+    "en": "Cancelling stops this sync and pauses automatic sync. Saved data is retained."
+  },
+  "errorCancelled": {
+    "zh": "同步已取消",
+    "en": "Sync cancelled"
+  },
+  "errorGeneric": {
+    "zh": "操作失败，请重试。如仍失败，请检查服务端或联系管理员。",
+    "en": "The operation failed. Retry, or check the server and contact your administrator if it persists."
+  },
+  "errorCredentials": {
+    "zh": "用户名、邮箱或密码不正确。",
+    "en": "The username, email or password is incorrect."
+  },
+  "errorSession": {
+    "zh": "登录状态已失效，请重新登录。",
+    "en": "Your session has expired. Please sign in again."
+  },
+  "errorDisabled": {
+    "zh": "账号已被禁用，请联系管理员。",
+    "en": "This account is disabled. Contact your administrator."
+  },
+  "errorPermission": {
+    "zh": "没有操作权限。",
+    "en": "You do not have permission to perform this operation."
+  },
+  "errorMissing": {
+    "zh": "内容不存在或已被删除，请刷新后重试。",
+    "en": "The item is missing or has been deleted. Refresh and retry."
+  },
+  "errorInvalidResponse": {
+    "zh": "服务端返回的数据无效，请检查服务端版本或配置。",
+    "en": "The server returned invalid data. Check the server version or configuration."
+  },
+  "errorInvalidRequest": {
+    "zh": "请求参数无效，请刷新后重试。",
+    "en": "The request is invalid. Refresh and retry."
+  },
+  "errorBusy": {
+    "zh": "正在执行同步或上传，请稍后重试。",
+    "en": "A sync or upload is in progress. Please try again shortly."
+  },
+  "errorSessionSwitch": {
+    "zh": "旧账号的任务仍在结束，请稍后重试切换。",
+    "en": "The previous account’s tasks are still stopping. Retry switching shortly."
+  },
+  "errorAccountMismatch": {
+    "zh": "账号已切换或数据不属于此账号，请返回后重试。",
+    "en": "The account changed or the data belongs to another account. Go back and retry."
+  },
+  "errorCacheMissing": {
+    "zh": "未找到此账号的本地缓存，请重新登录。",
+    "en": "No local cache was found for this account. Please sign in again."
+  },
+  "errorConflict": {
+    "zh": "检测到内容冲突，本地修改已保留，请核对后重试。",
+    "en": "A conflict was detected. Your local changes are retained; review them and retry."
+  },
+  "errorChanged": {
+    "zh": "内容或资源已变化，请刷新后重试。",
+    "en": "The content or resource changed. Refresh and retry."
+  },
+  "errorFileDownload": {
+    "zh": "文件下载失败，请检查网络或服务端文件是否存在。",
+    "en": "The file could not be downloaded. Check the network and whether the server file exists."
+  },
+  "errorFileTooLarge": {
+    "zh": "文件过大，请选择较小的文件。",
+    "en": "The file is too large. Choose a smaller file."
+  },
+  "errorFileUnavailable": {
+    "zh": "此资源不属于当前笔记或快照，请刷新后重试。",
+    "en": "This resource does not belong to the current note or snapshot. Refresh and retry."
+  },
+  "errorUploadUnconfirmed": {
+    "zh": "上传结果尚未确认，本地数据已保留，请核实上传结果后重试。",
+    "en": "The upload result is unconfirmed. Local data is retained; verify the result before retrying."
+  },
+  "errorHierarchy": {
+    "zh": "笔记本层级无效，请检查父笔记本后重试。",
+    "en": "The notebook hierarchy is invalid. Check the parent notebooks and retry."
+  },
+  "errorSyncCursor": {
+    "zh": "服务端同步状态异常，请检查服务端并重新同步。",
+    "en": "The server sync state is invalid. Check the server and resync."
+  },
+  "errorSharing": {
+    "zh": "共享操作失败，请刷新后重试。",
+    "en": "The sharing operation failed. Refresh and retry."
+  },
+  "errorNative": {
+    "zh": "无法完成系统操作，请检查应用权限后重试。",
+    "en": "The system operation failed. Check app permissions and retry."
+  },
+  "errorDiskFull": {
+    "zh": "存储空间不足，请释放空间后重试。",
+    "en": "Storage is full. Free some space and retry."
+  },
+  "userGroups": {
+    "zh": "用户分组",
+    "en": "User groups"
+  },
+  "groupsDescription": {
+    "zh": "管理用于共享笔记和笔记本的用户分组，需要连接服务端。",
+    "en": "Manage user groups for sharing notes and notebooks. A server connection is required."
+  },
+  "groupCreate": {
+    "zh": "新建分组",
+    "en": "Create group"
+  },
+  "groupRename": {
+    "zh": "重命名分组",
+    "en": "Rename group"
+  },
+  "groupDelete": {
+    "zh": "删除分组",
+    "en": "Delete group"
+  },
+  "groupAddMember": {
+    "zh": "添加成员",
+    "en": "Add member"
+  },
+  "groupRemoveMember": {
+    "zh": "移除成员",
+    "en": "Remove member"
+  },
+  "groupName": {
+    "zh": "分组名称",
+    "en": "Group name"
+  },
+  "groupNameRequired": {
+    "zh": "请输入分组名称",
+    "en": "Enter a group name"
+  },
+  "groupDeleteConfirm": {
+    "zh": "确定删除分组“{0}”吗？通过此分组提供的共享也会取消。",
+    "en": "Delete group “{0}”? Sharing through this group will also be removed."
+  },
+  "groupRemoveConfirm": {
+    "zh": "确定将 {0} 移出此分组吗？",
+    "en": "Remove {0} from this group?"
+  },
+  "groupConfirm": {
+    "zh": "确定",
+    "en": "Confirm"
+  },
+  "groupsEmpty": {
+    "zh": "尚无分组",
+    "en": "No groups yet"
+  },
+  "groupMembersEmpty": {
+    "zh": "暂无成员",
+    "en": "No members yet"
+  },
+  "groupReadOnly": {
+    "zh": "他人创建的分组，仅创建者可以管理成员。",
+    "en": "Only the owner can manage members of this group."
+  },
+  "groupMemberCount": {
+    "zh": "{0} 位成员",
+    "en": "{0} members"
+  },
+  "groupUserMissing": {
+    "zh": "未找到该用户，请检查用户名或邮箱。",
+    "en": "User not found. Check the username or email."
+  },
+  "groupDuplicate": {
+    "zh": "该用户已在分组中。",
+    "en": "This user is already in the group."
+  },
+  "errorRequestTimedOut": {
+    "zh": "服务器响应超时，请稍后重试。",
+    "en": "The server response timed out. Please try again."
+  },
+  "errorNoteDownloadTimedOut": {
+    "zh": "笔记正文下载超时，本地数据未替换。请检查网络后重试；可取消同步，稍后继续。",
+    "en": "Downloading note bodies timed out. Local data was not replaced. Check your connection and retry, or cancel sync and try later."
+  },
+  "loginSyncFailed": {
+    "zh": "账号验证成功，但登录后的同步未完成：{0}",
+    "en": "Your account was verified, but the initial sync did not complete: {0}"
+  }
+}

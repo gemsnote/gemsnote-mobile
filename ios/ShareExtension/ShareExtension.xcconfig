@@ -1,0 +1,3 @@
+#include "../Flutter/Generated.xcconfig"
+// Keep the extension version in step with the containing Flutter application.
+// The extension does not link Flutter or any generated plugin package.

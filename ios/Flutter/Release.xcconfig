@@ -1,0 +1,3 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Generated.xcconfig"
+GEMSNOTE_LINK_HOST = links.gemsnote.invalid

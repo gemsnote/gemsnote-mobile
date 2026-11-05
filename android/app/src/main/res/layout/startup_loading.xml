@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/startup_background"
+    android:clickable="true"
+    android:focusable="true">
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        android:src="@drawable/startup_logo"
+        android:contentDescription="@string/app_name" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:translationY="100dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/startup_spinner"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/startup_spinner"
+            android:contentDescription="@string/startup_loading" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/startup_loading"
+            android:textColor="#d5e1d9"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>

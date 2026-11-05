@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.gemsnote.sharefixture">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+    <application android:label="Gemsnote sharing fixture" android:debuggable="true"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity android:name=".SharingActivity" android:exported="true" />
+        <activity android:name=".ReceivingActivity" android:exported="true"
+            android:label="Gemsnote test receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <provider android:name=".FixtureProvider"
+            android:authorities="com.github.gemsnote.sharefixture.files"
+            android:exported="false" android:grantUriPermissions="true" />
+    </application>
+</manifest>

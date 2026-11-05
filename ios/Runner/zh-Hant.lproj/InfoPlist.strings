@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "珠璣筆記";
+"NSCameraUsageDescription" = "拍攝照片，用作你的 Gemsnote 頭像。";
+"NSFaceIDUsageDescription" = "使用 Face ID 解鎖已儲存的 Gemsnote 工作階段。";
