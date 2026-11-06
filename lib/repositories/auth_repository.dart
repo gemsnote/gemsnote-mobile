@@ -2619,9 +2619,9 @@ class AuthRepository {
         email: email.trim(),
       );
 
-  static void _validateCompatibility(LoginResult result) {
+  void _validateCompatibility(LoginResult result) {
     if (_compareVersions(
-          Api2Client.clientVersion,
+          _api.clientVersion,
           result.minimumClientVersion,
         ) <
         0) {

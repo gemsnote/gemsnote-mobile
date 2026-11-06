@@ -1,4 +1,5 @@
 import '../core/api/api2_client.dart';
+import '../core/app_version.dart';
 import '../data/database/app_database.dart';
 import '../data/session/session_store.dart';
 import '../repositories/auth_repository.dart';
@@ -19,7 +20,7 @@ Future<AuthRepository> initializeApplication({
         database = value;
       }),
     ]);
-    final api = Api2Client();
+    final api = Api2Client(clientVersion: await AppVersion.current());
     return AuthRepository(
       api,
       database!,

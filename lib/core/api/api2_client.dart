@@ -38,13 +38,17 @@ class LoginResult {
 class Api2Client {
   Api2Client({
     http.Client? httpClient,
+    // Unit transports do not have platform package metadata. Every production
+    // construction site supplies AppVersion.current(); this fallback is only
+    // for isolated API/repository tests.
+    this.clientVersion = 'test',
     this.requestTimeout = const Duration(seconds: 60),
     this.noteContentTimeout = const Duration(minutes: 5),
   }) : _http = httpClient ?? http.Client();
 
-  static const clientVersion = '1.1.0';
   static const requiredApiVersion = '1.1.0';
   static const syncNotePageSize = 10;
+  final String clientVersion;
   final http.Client _http;
   final Duration requestTimeout;
   final Duration noteContentTimeout;
@@ -584,18 +588,15 @@ class Api2Client {
     String token,
     String fileId,
   ) async {
-    final request =
-        _newRequest(
-            'GET',
-            _uri(
-              server,
-              '/api2/file/getImage',
-              token: token,
-              query: {'fileId': fileId},
-            ),
-          )
-          ..followRedirects = false
-          ..headers['Authorization'] = 'Bearer $token';
+    final uri = _uri(
+      server,
+      '/api2/file/getImage',
+      token: token,
+      query: {'fileId': fileId},
+    );
+    final request = _newRequest('GET', uri)
+      ..followRedirects = false
+      ..headers['Authorization'] = 'Bearer $token';
     try {
       final response = await _send(request)
           .timeout(const Duration(seconds: 15));
@@ -656,18 +657,15 @@ class Api2Client {
         !files.any((item) => item.id == file.id && item.isAttachment)) {
       throw const ApiException('attachmentNotInNote');
     }
-    final request =
-        _newRequest(
-            'GET',
-            _uri(
-              server,
-              '/api2/file/getAttach',
-              token: token,
-              query: {'fileId': file.id},
-            ),
-          )
-          ..followRedirects = false
-          ..headers['Authorization'] = 'Bearer $token';
+    final uri = _uri(
+      server,
+      '/api2/file/getAttach',
+      token: token,
+      query: {'fileId': file.id},
+    );
+    final request = _newRequest('GET', uri)
+      ..followRedirects = false
+      ..headers['Authorization'] = 'Bearer $token';
     try {
       final response = await _send(request)
           .timeout(const Duration(seconds: 30));
@@ -1083,17 +1081,14 @@ class Api2Client {
       throw const ApiException('sharedFileTooLarge');
     }
     await sharedContent(server: server, token: token, shared: shared);
-    final request =
-        _newRequest(
-            'GET',
-            _uri(
-              server,
-              '/api2/shared/notes/${file.noteId}/files/${file.fileId}',
-              token: token,
-            ),
-          )
-          ..followRedirects = false
-          ..headers['Authorization'] = 'Bearer $token';
+    final uri = _uri(
+      server,
+      '/api2/shared/notes/${file.noteId}/files/${file.fileId}',
+      token: token,
+    );
+    final request = _newRequest('GET', uri)
+      ..followRedirects = false
+      ..headers['Authorization'] = 'Bearer $token';
     try {
       final response = await _send(request)
           .timeout(const Duration(seconds: 15));

@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:workmanager/workmanager.dart';
 
 import '../core/api/api2_client.dart';
+import '../core/app_version.dart';
 import '../data/database/app_database.dart';
 import '../data/session/session_store.dart';
 import '../repositories/auth_repository.dart';
@@ -46,7 +47,7 @@ Future<bool> runBackgroundNoteSync() async {
     if (_ios && !await prepareIOSBackgroundRun(database, sync: true)) {
       return true;
     }
-    final api = Api2Client();
+    final api = Api2Client(clientVersion: await AppVersion.current());
     final repository = AuthRepository(
       api,
       database,
@@ -90,7 +91,7 @@ Future<bool> runBackgroundResourceCache() async {
     if (_ios && !await prepareIOSBackgroundRun(database, sync: false)) {
       return true;
     }
-    final api = Api2Client();
+    final api = Api2Client(clientVersion: await AppVersion.current());
     final repository = AuthRepository(
       api,
       database,

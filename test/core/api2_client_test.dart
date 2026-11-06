@@ -10,6 +10,7 @@ import 'package:http/testing.dart';
 void main() {
   test('login uses the finalized API2 JSON contract', () async {
     final client = Api2Client(
+      clientVersion: '1.1.0',
       httpClient: MockClient((request) async {
         expect(request.method, 'POST');
         expect(request.url.path, '/api2/auth/login');

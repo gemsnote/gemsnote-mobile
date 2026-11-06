@@ -1,6 +1,6 @@
 # 移动端发布
 
-普通分支 push、PR 和手动 CI 只运行检查与测试。只有推送 `1.0.0` 这类无 `v`
+普通分支 push、PR 和手动 CI 只运行检查与测试。只有推送 `1.1.0` 这类无 `v`
 的正式 tag，才执行 `.github/workflows/release.yml`。当前自动发布仅覆盖 Android；
 iOS 正式签名和发布尚未实现，不发布模拟器包冒充 IPA。
 
@@ -92,8 +92,8 @@ DEVELOPER_DIR=/path/to/Xcode.app/Contents/Developer \
 配置签名后先本地验证，再提交版本变更并推送新 tag：
 
 ```sh
-git tag -a 1.0.0 -m "Gemsnote Mobile 1.0.0"
-git push origin 1.0.0
+git tag -a 1.1.0 -m "Gemsnote Mobile 1.1.0"
+git push origin 1.1.0
 ```
 
 不要覆盖已有 tag；失败先查 Actions 日志，修复代码后使用新的版本 tag。
