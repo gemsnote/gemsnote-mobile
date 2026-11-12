@@ -154,6 +154,25 @@ void main() {
       await tab(0);
       expect(find.text('Favorite note'), findsOneWidget);
       expect(find.text('Plain note'), findsOneWidget);
+      await tester.longPress(find.text('Plain note'));
+      await settle();
+      expect(find.byKey(const ValueKey('note-selection-menu')), findsOneWidget);
+      await tester.tap(find.text('Favorite note'));
+      await settle();
+      expect(
+        tester
+            .widgetList<ListTile>(find.byType(ListTile))
+            .where((tile) => tile.selected)
+            .length,
+        2,
+      );
+      await tester.tap(find.byKey(const ValueKey('note-selection-menu')));
+      await settle();
+      expect(find.text('移动'), findsOneWidget);
+      expect(find.widgetWithText(PopupMenuItem<String>, '共享'), findsOneWidget);
+      expect(find.text('删除'), findsOneWidget);
+      await tester.tapAt(const Offset(10, 100));
+      await settle();
       await tester.pumpWidget(const SizedBox());
     },
   );

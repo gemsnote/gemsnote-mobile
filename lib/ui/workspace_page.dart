@@ -237,6 +237,154 @@ class _WorkspacePageState extends State<WorkspacePage>
   }
 
   late Future<List<Notebook>> _notebooks;
+  final _selectedNotes = <String>{};
+  bool _batchBusy = false;
+  String _batchLabel(String zh, String en) =>
+      AppStrings.snapshot(context).locale.languageCode == 'zh' ? zh : en;
+  void _toggleSelection(Note note) => setState(() {
+    if (!_selectedNotes.add(note.noteId)) _selectedNotes.remove(note.noteId);
+  });
+  Future<void> _batchAction(String action) async {
+    final selected = _notes
+        .where((n) => _selectedNotes.contains(n.noteId))
+        .toList();
+    if (_batchBusy || selected.isEmpty) return;
+    String? target;
+    if (action == 'move') {
+      final books = await widget.repository.notebooks(
+        widget.session.account.cacheKey,
+      );
+      if (!mounted) return;
+      target = await showDialog<String>(
+        context: context,
+        builder: (context) => StatefulBuilder(
+          builder: (context, update) => AlertDialog(
+            title: Text(_batchLabel('移动所选笔记', 'Move selected notes')),
+            content: SizedBox(
+              width: 320,
+              height: 320,
+              child: NotebookTargetPicker(
+                notebooks: books,
+                selected: target,
+                onSelected: (id) => update(() => target = id),
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(trNow(context, 'm0026')),
+              ),
+              FilledButton(
+                onPressed: target == null
+                    ? null
+                    : () => Navigator.pop(context, target),
+                child: Text(trNow(context, 'm0168')),
+              ),
+            ],
+          ),
+        ),
+      );
+      if (target == null) return;
+    } else if (action == 'share') {
+      final input = TextEditingController();
+      target = await showDialog<String>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(_batchLabel('共享所选笔记', 'Share selected notes')),
+          content: TextField(
+            controller: input,
+            decoration: InputDecoration(
+              labelText: _batchLabel('用户名或邮箱', 'Username or email'),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(trNow(context, 'm0026')),
+            ),
+            FilledButton(
+              onPressed: () {
+                if (input.text.trim().isNotEmpty) {
+                  Navigator.pop(context, input.text.trim());
+                }
+              },
+              child: Text(_batchLabel('共享', 'Share')),
+            ),
+          ],
+        ),
+      );
+      // The closing dialog may still reference its controller during animation.
+      Future<void>.delayed(const Duration(seconds: 1), input.dispose);
+      if (target == null) return;
+    } else {
+      final confirmed = await showDialog<bool>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(_batchLabel('删除所选笔记？', 'Delete selected notes?')),
+          content: Text(
+            _batchLabel(
+              '所选笔记将移入回收站。',
+              'Selected notes will be moved to Trash.',
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: Text(trNow(context, 'm0026')),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: Text(trNow(context, 'm0293')),
+            ),
+          ],
+        ),
+      );
+      if (confirmed != true) return;
+    }
+    if (!mounted) return;
+    setState(() => _batchBusy = true);
+    var failures = 0;
+    for (final note in selected) {
+      if (!mounted) break;
+      try {
+        if (action == 'share') {
+          await widget.repository.shareNote(widget.session, note, target!);
+        } else if (action == 'move') {
+          await widget.repository.saveNote(
+            widget.session,
+            note.copyWith(notebookId: target!),
+          );
+        } else {
+          await widget.repository.saveNote(
+            widget.session,
+            note.copyWith(isTrash: true),
+          );
+        }
+        _selectedNotes.remove(note.noteId);
+      } on Object {
+        failures++;
+      }
+    }
+    if (!mounted) return;
+    try {
+      await _reloadNotes();
+    } finally {
+      if (mounted) setState(() => _batchBusy = false);
+    }
+    if (mounted && failures > 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            _batchLabel(
+              '$failures 篇笔记操作失败，可重试。',
+              '$failures notes failed. Please retry.',
+            ),
+          ),
+        ),
+      );
+    }
+  }
+
   List<Note> _notes = const [];
   Notebook? _selectedNotebook;
   String? _selectedTag;
@@ -897,6 +1045,9 @@ class _WorkspacePageState extends State<WorkspacePage>
         _selectedTag = null;
         _showingTrash = false;
         _notes = notes;
+        _selectedNotes.removeWhere(
+          (id) => !notes.any((note) => note.noteId == id),
+        );
       });
     }
   }
@@ -950,6 +1101,9 @@ class _WorkspacePageState extends State<WorkspacePage>
         _showingTrash = false;
         _showingAll = true;
         _notes = notes;
+        _selectedNotes.removeWhere(
+          (id) => !notes.any((note) => note.noteId == id),
+        );
       });
     } on Object catch (error) {
       if (mounted) {
@@ -993,6 +1147,9 @@ class _WorkspacePageState extends State<WorkspacePage>
         _showingTrash = true;
         _showingAll = false;
         _notes = notes;
+        _selectedNotes.removeWhere(
+          (id) => !notes.any((note) => note.noteId == id),
+        );
       });
     }
   }
@@ -1262,6 +1419,9 @@ class _WorkspacePageState extends State<WorkspacePage>
         _selectedNotebook = null;
         _showingTrash = false;
         _notes = notes;
+        _selectedNotes.removeWhere(
+          (id) => !notes.any((note) => note.noteId == id),
+        );
       });
     } on Object catch (error) {
       if (mounted) {
@@ -2228,6 +2388,23 @@ class _WorkspacePageState extends State<WorkspacePage>
                       },
                       itemBuilder: (_) => [
                         PopupMenuItem(
+                          value: 'child',
+                          child: Text(tr(context, 'm0330')),
+                        ),
+                        PopupMenuItem(
+                          value: 'rename',
+                          child: Text(tr(context, 'm0528')),
+                        ),
+                        PopupMenuItem(
+                          value: 'move',
+                          child: Text(tr(context, 'm0168')),
+                        ),
+                        PopupMenuItem(
+                          value: 'delete',
+                          child: Text(tr(context, 'm0672')),
+                        ),
+                        const PopupMenuDivider(),
+                        PopupMenuItem(
                           value: 'import',
                           enabled: !_syncing && !_loggingOut,
                           child: Text(tr(context, 'm0136')),
@@ -2242,22 +2419,6 @@ class _WorkspacePageState extends State<WorkspacePage>
                               _exportingNotebook ? 'm0283' : 'notebookExport',
                             ),
                           ),
-                        ),
-                        PopupMenuItem(
-                          value: 'rename',
-                          child: Text(tr(context, 'm0528')),
-                        ),
-                        PopupMenuItem(
-                          value: 'child',
-                          child: Text(tr(context, 'm0330')),
-                        ),
-                        PopupMenuItem(
-                          value: 'move',
-                          child: Text(tr(context, 'm0168')),
-                        ),
-                        PopupMenuItem(
-                          value: 'delete',
-                          child: Text(tr(context, 'm0672')),
                         ),
                         if (notebook.usn > 0 && notebook.isDirty)
                           PopupMenuItem(
@@ -2329,6 +2490,64 @@ class _WorkspacePageState extends State<WorkspacePage>
                         : _selectedNotebook!.title),
         ),
         actions: [
+          if (_selectedNotes.isNotEmpty) ...[
+            Text('${_selectedNotes.length}'),
+            IconButton(
+              icon: const Icon(Icons.close),
+              onPressed: _batchBusy
+                  ? null
+                  : () => setState(_selectedNotes.clear),
+            ),
+            PopupMenuButton<String>(
+              enabled: !_batchBusy,
+              onSelected: (action) async {
+                try {
+                  await _batchAction(action);
+                } on Object catch (error) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(this.context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          AppStrings.snapshot(this.context)
+                              .translateMessage(error.toString()),
+                        ),
+                      ),
+                    );
+                  }
+                }
+              },
+              key: const ValueKey('note-selection-menu'),
+              itemBuilder: (_) => [
+                PopupMenuItem(
+                  value: 'move',
+                  enabled:
+                      !_showingTrash &&
+                      !_notes.any(
+                        (n) => _selectedNotes.contains(n.noteId) && n.isShared,
+                      ),
+                  child: Text(_batchLabel('移动', 'Move')),
+                ),
+                PopupMenuItem(
+                  value: 'share',
+                  enabled:
+                      !_showingTrash &&
+                      !_notes.any(
+                        (n) => _selectedNotes.contains(n.noteId) && n.isShared,
+                      ),
+                  child: Text(_batchLabel('共享', 'Share')),
+                ),
+                PopupMenuItem(
+                  value: 'delete',
+                  enabled:
+                      !_showingTrash &&
+                      !_notes.any(
+                        (n) => _selectedNotes.contains(n.noteId) && n.isShared,
+                      ),
+                  child: Text(_batchLabel('删除', 'Delete')),
+                ),
+              ],
+            ),
+          ],
           if (_shareInbox.supported) _shareButton,
           PopupMenuButton<NoteSort>(
             tooltip: trNow(context, 'm0535'),
@@ -2387,6 +2606,10 @@ class _WorkspacePageState extends State<WorkspacePage>
                     itemBuilder: (context, index) {
                       final note = sortedNotes[index];
                       return ListTile(
+                        selected: _selectedNotes.contains(note.noteId),
+                        onLongPress: _batchBusy
+                            ? null
+                            : () => _toggleSelection(note),
                         leading: Icon(
                           note.isMarkdown ? Icons.code : Icons.article_outlined,
                         ),
@@ -2435,7 +2658,11 @@ class _WorkspacePageState extends State<WorkspacePage>
                                       : null,
                                 ),
                               ),
-                        onTap: () => _openReader(note),
+                        onTap: _batchBusy
+                            ? null
+                            : () => _selectedNotes.isEmpty
+                                  ? _openReader(note)
+                                  : _toggleSelection(note),
                       );
                     },
                   ),
