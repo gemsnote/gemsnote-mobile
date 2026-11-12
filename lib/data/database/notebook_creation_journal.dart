@@ -54,41 +54,50 @@ class NotebookCreationJournal {
     return rows.isEmpty ? null : rows.single['state'] as String;
   }
 
-  Future<Notebook> create(String title, String parentId) =>
-      database.transaction((txn) async {
-        title = title.trim();
-        if (title.isEmpty) throw const FormatException('请输入笔记本名称');
-        parentId = await resolve(parentId, transaction: txn);
-        if (parentId.isNotEmpty &&
-            (await txn.query(
-              'notebooks',
-              where: 'account_id = ? AND server_id = ?',
-              whereArgs: [accountId, parentId],
-            )).isEmpty) {
-          throw StateError('父笔记本已不存在');
-        }
-        final random = Random.secure();
-        final id = List.generate(
-          12,
-          (_) => random.nextInt(256).toRadixString(16).padLeft(2, '0'),
-        ).join();
-        final row = <String, Object?>{
-          'account_id': accountId,
-          'server_id': id,
-          'parent_server_id': parentId,
-          'title': title,
-          'sequence': 0,
-          'usn': 0,
-          'number_notes': 0,
-          'is_dirty': 1,
-        };
-        await txn.insert('notebooks', row);
-        await txn.insert('notebook_creations', {
-          'account_id': accountId,
-          'local_id': id,
-        });
-        return _book(row);
+  Future<Notebook> create(
+    String title,
+    String parentId, {
+    Transaction? transaction,
+  }) {
+    Future<Notebook> create(DatabaseExecutor txn) async {
+      title = title.trim();
+      if (title.isEmpty) throw const FormatException('请输入笔记本名称');
+      parentId = await resolve(parentId, transaction: txn);
+      if (parentId.isNotEmpty &&
+          (await txn.query(
+            'notebooks',
+            where: 'account_id = ? AND server_id = ?',
+            whereArgs: [accountId, parentId],
+          )).isEmpty) {
+        throw StateError('父笔记本已不存在');
+      }
+      final random = Random.secure();
+      final id = List.generate(
+        12,
+        (_) => random.nextInt(256).toRadixString(16).padLeft(2, '0'),
+      ).join();
+      final row = <String, Object?>{
+        'account_id': accountId,
+        'server_id': id,
+        'parent_server_id': parentId,
+        'title': title,
+        'sequence': 0,
+        'usn': 0,
+        'number_notes': 0,
+        'is_dirty': 1,
+      };
+      await txn.insert('notebooks', row);
+      await txn.insert('notebook_creations', {
+        'account_id': accountId,
+        'local_id': id,
       });
+      return _book(row);
+    }
+
+    return transaction == null
+        ? database.transaction(create)
+        : create(transaction);
+  }
 
   Future<Notebook> begin(String id, {bool idempotent = false}) =>
       database.transaction((txn) async {

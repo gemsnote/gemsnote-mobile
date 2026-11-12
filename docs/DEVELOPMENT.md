@@ -398,6 +398,15 @@ Markdown 阅读使用 [flutter_markdown_plus](https://pub.dev/packages/flutter_m
 
 ## 原文导入
 
+Markdown 单文件与 ZIP 内的 Markdown 均解析 Hugo YAML（`---`）、TOML（`+++`）、JSON front matter：
+标题、`date`、`lastmod`、`tags` 写入笔记元数据，完整 front matter 从正文移除。
+没有 front matter 的文件使用文件名、当前时间和空标签；有元数据时标题缺失则留空，
+只提供一个日期则用于创建与修改时间，两项日期都缺失或日期无效则拒绝导入。
+无时区的日期统一按 UTC 解释。ZIP 不创建文件名对应的外层笔记本，根目录文件放入当前笔记本，
+目录逐层成为子笔记本。ZIP 最大 32 MiB，内部 Markdown 单篇最大 4 MiB、合计 64 MiB；
+最多 2000 篇、1000 个笔记本、20 层目录。先校验完整 ZIP，再通过一个 SQLite 事务创建目录与笔记。
+删除笔记本的确认框提供默认不勾选的“同时删除笔记”选项，笔记移入回收站；有子笔记本时需先处理。
+
 笔记本右侧的三点菜单可通过系统文件选择器导入 UTF-8 Markdown、TXT、HTML，以及 RTF/DOCX，单文件
 最多 32 MiB；同时检查文件扩展名、声明大小和实际流式字节数。文本文件拒绝无效 UTF-8 和
 含 NUL 的内容，去除 UTF-8 BOM；RTF/DOCX 按文档格式单独解析。TXT 按 Markdown 保存，HTML 保持原文，

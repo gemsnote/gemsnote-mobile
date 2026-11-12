@@ -31,6 +31,7 @@ void main() {
   late List<Map<String, Object?>> tags;
   var usn = 5, writes = 0;
   var loseDeleteResponse = false, failUpdate = false;
+  var deleteAll = false;
   setUp(() async {
     sqfliteFfiInit();
     databaseFactory = databaseFactoryFfi;
@@ -39,6 +40,7 @@ void main() {
     writes = 0;
     loseDeleteResponse = false;
     failUpdate = false;
+    deleteAll = false;
     book = {'NotebookId': bookId, 'Title': 'Empty', 'Usn': 1};
     notes = [];
     tags = [
@@ -61,7 +63,17 @@ void main() {
           writes++;
           final fields = request.bodyFields;
           if (route == 'delete') {
-            expect(fields, {'notebookId': bookId, 'usn': '1'});
+            expect(fields, {
+              'notebookId': bookId,
+              'usn': '1',
+              if (deleteAll) 'deleteNotes': 'true',
+            });
+            if (deleteAll) {
+              notes = [
+                for (final note in notes)
+                  {...note, 'IsTrash': true, 'Usn': ++usn},
+              ];
+            }
             book = {...book, 'IsDeleted': true, 'Usn': ++usn};
             if (loseDeleteResponse) throw http.ClientException('response lost');
             result = {'Ok': true};
@@ -165,6 +177,20 @@ void main() {
     await repo.deleteNotebook(session, Notebook.fromJson(book));
     expect(await db.notebooks(account.cacheKey), isEmpty);
     expect(await db.lastSyncUsn(account.cacheKey), 6);
+  });
+  test('explicit notebook delete option trashes contained notes', () async {
+    await seedNotes();
+    deleteAll = true;
+    await repo.deleteNotebook(
+      session,
+      Notebook.fromJson(book),
+      deleteNotes: true,
+    );
+    expect(await db.notebooks(account.cacheKey), isEmpty);
+    final cached = await db.raw.query('notes');
+    expect(cached, hasLength(2));
+    expect(cached.every((note) => note['is_trash'] == 1), isTrue);
+    expect(cached.every((note) => note['content'] == 'body'), isTrue);
   });
   test(
     'lost notebook delete response preserves cache until next sync',

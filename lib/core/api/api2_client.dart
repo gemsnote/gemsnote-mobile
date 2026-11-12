@@ -1216,12 +1216,17 @@ class Api2Client {
     required Uri server,
     required String token,
     required Notebook notebook,
+    bool deleteNotes = false,
   }) async {
     final data = await _requestFormJson(
       server: server,
       path: '/api2/client/notebook/delete',
       token: token,
-      fields: {'notebookId': notebook.notebookId, 'usn': '${notebook.usn}'},
+      fields: {
+        'notebookId': notebook.notebookId,
+        'usn': '${notebook.usn}',
+        if (deleteNotes) 'deleteNotes': 'true',
+      },
     );
     if (data['Ok'] != true) {
       throw ApiException(data['Msg']?.toString() ?? 'deleteNotebookFailed');

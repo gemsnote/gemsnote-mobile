@@ -1535,12 +1535,35 @@ class _WorkspacePageState extends State<WorkspacePage>
               source.bundle!,
             );
           }
+          if (source.archive case final archive?) {
+            return widget.repository.importMarkdownArchive(
+              widget.session,
+              targetId,
+              title: archive.title,
+              folders: archive.folders,
+              notes: archive.notes
+                  .map(
+                    (entry) => (
+                      folder: entry.folder,
+                      title: entry.note.title,
+                      content: entry.note.content,
+                      tags: entry.note.tags,
+                      createdTime: entry.note.createdTime,
+                      updatedTime: entry.note.updatedTime,
+                    ),
+                  )
+                  .toList(),
+            );
+          }
           return widget.repository.createNote(
             widget.session,
             notebookId: targetId,
             isMarkdown: source.isMarkdown,
             title: source.title,
             content: source.content,
+            tags: source.tags,
+            createdTime: source.createdTime,
+            updatedTime: source.updatedTime,
           );
         },
       ),
@@ -1778,28 +1801,47 @@ class _WorkspacePageState extends State<WorkspacePage>
   Future<void> _deleteNotebook(Notebook notebook) async {
     if (_accountOpen || _syncing || _loggingOut || _signedOut) return;
     _accountOpen = true;
+    var deleteNotes = false;
     try {
       final confirmed = await showDialog<bool>(
         context: context,
-        builder: (context) => AlertDialog(
-          title: Text(trNow(context, 'm0672')),
-          content: Text(trNow(context, 'm0673', [notebook.title])),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context, false),
-              child: Text(trNow(context, 'm0026')),
+        builder: (context) => StatefulBuilder(
+          builder: (context, update) => AlertDialog(
+            title: Text(trNow(context, 'm0672')),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(trNow(context, 'm0673', [notebook.title])),
+                CheckboxListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: Text(trNow(context, 'deleteNotebookNotes')),
+                  value: deleteNotes,
+                  onChanged: (value) =>
+                      update(() => deleteNotes = value ?? false),
+                ),
+              ],
             ),
-            FilledButton(
-              onPressed: () => Navigator.pop(context, true),
-              child: Text(trNow(context, 'm0672')),
-            ),
-          ],
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: Text(trNow(context, 'm0026')),
+              ),
+              FilledButton(
+                onPressed: () => Navigator.pop(context, true),
+                child: Text(trNow(context, 'm0672')),
+              ),
+            ],
+          ),
         ),
       );
       if (confirmed != true || !mounted) return;
       setState(() => _syncing = true);
       try {
-        await widget.repository.deleteNotebook(widget.session, notebook);
+        await widget.repository.deleteNotebook(
+          widget.session,
+          notebook,
+          deleteNotes: deleteNotes,
+        );
         if (!mounted) return;
         if (_selectedNotebook?.notebookId == notebook.notebookId) {
           _selectedNotebook = null;

@@ -11,6 +11,17 @@
     "zh": "无法读取本地登录状态，请重试。",
     "en": "Could not read the saved session. Please retry."
   },
+  "deleteNotebookNotes": {"zh":"同时删除笔记本里的所有笔记（移入回收站）","en":"Also delete all notes in this notebook (move to Trash)"},
+  "archiveImportInfo": {"zh":"导入 {0} 篇笔记和 {1} 个子笔记本","en":"Import {0} notes and {1} sub-notebooks"},
+  "hugoInvalid": {"zh":"Hugo 元数据格式无效","en":"Invalid Hugo front matter."},
+  "hugoDate": {"zh":"Hugo 日期无效","en":"Invalid Hugo date."},
+  "hugoMissingDate": {"zh":"Hugo 元数据缺少创建或修改时间","en":"Hugo front matter must contain a creation or modification date."},
+  "hugoTitle": {"zh":"Hugo 标题必须是文本","en":"The Hugo title must be text."},
+  "hugoTags": {"zh":"Hugo 标签格式无效","en":"Invalid Hugo tags."},
+  "zipPaths": {"zh":"ZIP 中包含不安全或重复的文件路径","en":"The ZIP contains unsafe or duplicate paths."},
+  "zipLimit": {"zh":"ZIP 文件数量超出导入限制","en":"The ZIP contains too many files."},
+  "zipSize": {"zh":"文档内容大小超出导入限制","en":"Document content exceeds the import size limit."},
+  "zipEmpty": {"zh":"ZIP 中没有可导入的文档或目录过多","en":"The ZIP has no supported documents or too many folders."},
   "m0001": {
     "zh": "未知",
     "en": "Unknown"
@@ -2720,8 +2731,8 @@
     "en": "Delete notebook"
   },
   "m0673": {
-    "zh": "删除空笔记本“{0}”？",
-    "en": "Delete empty notebook “{0}”?"
+    "zh": "删除笔记本“{0}”？子笔记本需先移动或删除。",
+    "en": "Delete notebook “{0}”? Move or delete sub-notebooks first."
   },
   "m0674": {
     "zh": "删除笔记本失败：{0}",
@@ -3164,8 +3175,8 @@
     "en": "Resource export failed: {0}"
   },
   "bundleSupportedFiles": {
-    "zh": "仅支持 Markdown、TXT、HTML、RTF、DOCX 或 .gemsnote 资源归档",
-    "en": "Only Markdown, TXT, HTML, RTF, DOCX or .gemsnote archives are supported."
+    "zh": "仅支持 Markdown、TXT、HTML、RTF、DOCX、ZIP 或 .gemsnote 资源归档",
+    "en": "Only Markdown, TXT, HTML, RTF, DOCX, ZIP or .gemsnote archives are supported."
   },
   "bundleFileLimit": {
     "zh": "文件超过允许大小：{0} 字节",

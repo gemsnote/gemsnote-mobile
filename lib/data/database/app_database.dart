@@ -1482,35 +1482,96 @@ class AppDatabase {
     required bool isMarkdown,
     String title = '',
     String content = '',
+    List<String> tags = const [],
+    String? createdTime,
+    String? updatedTime,
+    Transaction? transaction,
+  }) {
+    Future<Note> create(DatabaseExecutor txn) async {
+      notebookId = await NotebookCreationJournal(
+        raw,
+        account.cacheKey,
+      ).resolve(notebookId, transaction: txn);
+      final now = DateTime.now().toUtc().toIso8601String();
+      final note = Note(
+        noteId: _objectId(),
+        notebookId: notebookId,
+        userId: account.userId,
+        title: title,
+        content: content,
+        tags: tags,
+        usn: 0,
+        isMarkdown: isMarkdown,
+        isStarred: false,
+        isTrash: false,
+        isDeleted: false,
+        createdTime: createdTime ?? now,
+        updatedTime: updatedTime ?? now,
+      );
+      await _writeNote(
+        account.cacheKey,
+        note,
+        isDirty: true,
+        isNew: true,
+        executor: txn,
+      );
+      return note;
+    }
+
+    return transaction == null ? raw.transaction(create) : create(transaction);
+  }
+
+  Future<Note> importMarkdownArchive({
+    required Account account,
+    required String notebookId,
+    required String title,
+    required List<String> folders,
+    required List<
+      ({
+        String folder,
+        String title,
+        String content,
+        List<String> tags,
+        String? createdTime,
+        String? updatedTime,
+      })
+    >
+    notes,
   }) => raw.transaction((txn) async {
-    notebookId = await NotebookCreationJournal(
-      raw,
-      account.cacheKey,
-    ).resolve(notebookId, transaction: txn);
-    final now = DateTime.now().toUtc().toIso8601String();
-    final note = Note(
-      noteId: _objectId(),
-      notebookId: notebookId,
-      userId: account.userId,
-      title: title,
-      content: content,
-      tags: const [],
-      usn: 0,
-      isMarkdown: isMarkdown,
-      isStarred: false,
-      isTrash: false,
-      isDeleted: false,
-      createdTime: now,
-      updatedTime: now,
-    );
-    await _writeNote(
-      account.cacheKey,
-      note,
-      isDirty: true,
-      isNew: true,
-      executor: txn,
-    );
-    return note;
+    final books = NotebookCreationJournal(raw, account.cacheKey);
+    final target = await books.resolve(notebookId, transaction: txn);
+    if ((await txn.query(
+      'notebooks',
+      where: 'account_id = ? AND server_id = ?',
+      whereArgs: [account.cacheKey, target],
+    )).isEmpty) {
+      throw StateError('父笔记本已不存在');
+    }
+    final ids = <String, String>{'': target};
+    for (final folder in folders) {
+      final parts = folder.split('/');
+      final book = await books.create(
+        parts.last,
+        ids[parts.take(parts.length - 1).join('/')]!,
+        transaction: txn,
+      );
+      ids[folder] = book.notebookId;
+    }
+    Note? last;
+    for (final source in notes) {
+      last = await createLocalNote(
+        account: account,
+        notebookId: ids[source.folder]!,
+        isMarkdown: true,
+        title: source.title,
+        content: source.content,
+        tags: source.tags,
+        createdTime: source.createdTime,
+        updatedTime: source.updatedTime,
+        transaction: txn,
+      );
+    }
+    return last!;
   });
 
   /// A share's stable ID makes retry after a failed native acknowledgement

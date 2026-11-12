@@ -77,6 +77,13 @@ class _ImportNoteDialogState extends State<ImportNoteDialog> {
             ),
             if (_note != null) ...[
               Text(_note!.title),
+              if (_note!.archive != null)
+                Text(
+                  tr(context, 'archiveImportInfo', [
+                    _note!.archive!.notes.length,
+                    _note!.archive!.folders.length,
+                  ]),
+                ),
               if (_note!.warning != null)
                 Text(trMessage(context, _note!.warning!)),
               if (_note!.bundle != null)

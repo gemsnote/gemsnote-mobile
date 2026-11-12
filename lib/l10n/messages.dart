@@ -9,6 +9,35 @@ const messages = <String, (String, String)>{
     "无法读取本地登录状态，请重试。",
     "Could not read the saved session. Please retry.",
   ),
+  "deleteNotebookNotes": (
+    "同时删除笔记本里的所有笔记（移入回收站）",
+    "Also delete all notes in this notebook (move to Trash)",
+  ),
+  "archiveImportInfo": (
+    "导入 {0} 篇笔记和 {1} 个子笔记本",
+    "Import {0} notes and {1} sub-notebooks",
+  ),
+  "hugoInvalid": ("Hugo 元数据格式无效", "Invalid Hugo front matter."),
+  "hugoDate": ("Hugo 日期无效", "Invalid Hugo date."),
+  "hugoMissingDate": (
+    "Hugo 元数据缺少创建或修改时间",
+    "Hugo front matter must contain a creation or modification date.",
+  ),
+  "hugoTitle": ("Hugo 标题必须是文本", "The Hugo title must be text."),
+  "hugoTags": ("Hugo 标签格式无效", "Invalid Hugo tags."),
+  "zipPaths": (
+    "ZIP 中包含不安全或重复的文件路径",
+    "The ZIP contains unsafe or duplicate paths.",
+  ),
+  "zipLimit": ("ZIP 文件数量超出导入限制", "The ZIP contains too many files."),
+  "zipSize": (
+    "文档内容大小超出导入限制",
+    "Document content exceeds the import size limit.",
+  ),
+  "zipEmpty": (
+    "ZIP 中没有可导入的文档或目录过多",
+    "The ZIP has no supported documents or too many folders.",
+  ),
   "m0001": ("未知", "Unknown"),
   "m0002": ("关于珠玑笔记", "About Gemsnote"),
   "m0003": ("日积字句，终得珠玑。", "Collect your words, discover your gems."),
@@ -1223,7 +1252,10 @@ const messages = <String, (String, String)>{
   "m0670": ("重命名标签", "Rename tag"),
   "m0671": ("重命名标签失败：{0}", "Could not rename tag: {0}"),
   "m0672": ("删除笔记本", "Delete notebook"),
-  "m0673": ("删除空笔记本“{0}”？", "Delete empty notebook “{0}”?"),
+  "m0673": (
+    "删除笔记本“{0}”？子笔记本需先移动或删除。",
+    "Delete notebook “{0}”? Move or delete sub-notebooks first.",
+  ),
   "m0674": ("删除笔记本失败：{0}", "Could not delete notebook: {0}"),
   "errorSharedUpdated": (
     "共享笔记已更新，请刷新列表后重试",
@@ -1467,8 +1499,8 @@ const messages = <String, (String, String)>{
   ),
   "bundleExportFailed": ("资源导出未完成：{0}", "Resource export failed: {0}"),
   "bundleSupportedFiles": (
-    "仅支持 Markdown、TXT、HTML、RTF、DOCX 或 .gemsnote 资源归档",
-    "Only Markdown, TXT, HTML, RTF, DOCX or .gemsnote archives are supported.",
+    "仅支持 Markdown、TXT、HTML、RTF、DOCX、ZIP 或 .gemsnote 资源归档",
+    "Only Markdown, TXT, HTML, RTF, DOCX, ZIP or .gemsnote archives are supported.",
   ),
   "bundleFileLimit": (
     "文件超过允许大小：{0} 字节",

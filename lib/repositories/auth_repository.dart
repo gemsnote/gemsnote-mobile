@@ -1886,7 +1886,11 @@ class AuthRepository {
     parentId: parentId,
   );
 
-  Future<void> deleteNotebook(StoredSession session, Notebook notebook) async {
+  Future<void> deleteNotebook(
+    StoredSession session,
+    Notebook notebook, {
+    bool deleteNotes = false,
+  }) async {
     await _sync.runMetadataUpdate(
       () async {
         final books = await notebooks(session.account.cacheKey);
@@ -1902,10 +1906,11 @@ class AuthRepository {
         if (books.any((book) => book.parentNotebookId == notebook.notebookId)) {
           throw StateError('请先移动或删除子笔记本');
         }
-        if ((await notes(
-              session.account.cacheKey,
-              notebookId: notebook.notebookId,
-            )).isNotEmpty ||
+        if ((!deleteNotes &&
+                (await notes(
+                  session.account.cacheKey,
+                  notebookId: notebook.notebookId,
+                )).isNotEmpty) ||
             (await _database.dirtyNotes(session.account.cacheKey)).isNotEmpty) {
           throw StateError('请先移走笔记本中的笔记并同步待处理修改');
         }
@@ -1913,6 +1918,7 @@ class AuthRepository {
           server: session.account.server,
           token: session.token,
           notebook: matches.single,
+          deleteNotes: deleteNotes,
         );
       },
       account: session.account,
@@ -2181,12 +2187,42 @@ class AuthRepository {
     required bool isMarkdown,
     String title = '',
     String content = '',
+    List<String> tags = const [],
+    String? createdTime,
+    String? updatedTime,
   }) => _database.createLocalNote(
     account: session.account,
     notebookId: notebookId,
     isMarkdown: isMarkdown,
     title: title,
     content: content,
+    tags: tags,
+    createdTime: createdTime,
+    updatedTime: updatedTime,
+  );
+
+  Future<Note> importMarkdownArchive(
+    StoredSession session,
+    String notebookId, {
+    required String title,
+    required List<String> folders,
+    required List<
+      ({
+        String folder,
+        String title,
+        String content,
+        List<String> tags,
+        String? createdTime,
+        String? updatedTime,
+      })
+    >
+    notes,
+  }) => _database.importMarkdownArchive(
+    account: session.account,
+    notebookId: notebookId,
+    title: title,
+    folders: folders,
+    notes: notes,
   );
 
   Future<Note> importSharedText(
@@ -2620,11 +2656,7 @@ class AuthRepository {
       );
 
   void _validateCompatibility(LoginResult result) {
-    if (_compareVersions(
-          _api.clientVersion,
-          result.minimumClientVersion,
-        ) <
-        0) {
+    if (_compareVersions(_api.clientVersion, result.minimumClientVersion) < 0) {
       throw const ApiException('clientUpgradeRequired');
     }
     if (_compareVersions(result.serverVersion, Api2Client.requiredApiVersion) <
