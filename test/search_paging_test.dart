@@ -22,6 +22,7 @@ class SearchRepository implements AuthRepository {
     String accountId,
     String query, {
     int limit = 50,
+    String? notebookId,
   }) async => (await search(query, limit))
       .map(
         (note) => NoteSearchResult(
@@ -108,7 +109,12 @@ void main() {
         tags: [],
         lastSyncUsn: 1,
         notes: [
-          Note.fromJson({'NoteId': 'large', 'Title': '标题', 'Content': body}),
+          Note.fromJson({
+            'NoteId': 'large',
+            'NotebookId': 'book',
+            'Title': '标题',
+            'Content': body,
+          }),
         ],
       );
       final result = (await db.searchNoteSummaries(
@@ -116,6 +122,22 @@ void main() {
         '唯一关键词',
       )).single;
       expect(result.noteId, 'large');
+      expect(
+        await db.searchNoteSummaries(
+          account.cacheKey,
+          '唯一关键词',
+          notebookId: 'book',
+        ),
+        hasLength(1),
+      );
+      expect(
+        await db.searchNoteSummaries(
+          account.cacheKey,
+          '唯一关键词',
+          notebookId: 'other-book',
+        ),
+        isEmpty,
+      );
       expect(result.title, '标题');
       expect(await db.searchNoteSummaries('other', '唯一关键词'), isEmpty);
       expect(await db.searchableNote('other', result.noteId), isNull);

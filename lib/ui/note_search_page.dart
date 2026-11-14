@@ -11,11 +11,13 @@ class NoteSearchPage extends StatefulWidget {
   const NoteSearchPage({
     required this.repository,
     required this.session,
+    this.notebookId,
     super.key,
   });
 
   final AuthRepository repository;
   final StoredSession session;
+  final String? notebookId;
 
   @override
   State<NoteSearchPage> createState() => _NoteSearchPageState();
@@ -29,6 +31,7 @@ class _NoteSearchPageState extends State<NoteSearchPage> {
   var _limit = _pageSize;
   var _retryLimit = _pageSize;
   bool _busy = false;
+  bool _allNotebooks = false;
   String? _openingId;
   String? _openError;
   bool _hasMore = false;
@@ -76,6 +79,7 @@ class _NoteSearchPageState extends State<NoteSearchPage> {
         widget.session.account.cacheKey,
         _query.text.trim(),
         limit: requested + 1,
+        notebookId: _allNotebooks ? null : widget.notebookId,
       );
       if (!mounted || generation != _generation) return;
       setState(() {
@@ -136,6 +140,19 @@ class _NoteSearchPageState extends State<NoteSearchPage> {
     ),
     body: Column(
       children: [
+        if (widget.notebookId != null)
+          CheckboxListTile(
+            title: Text(
+              AppStrings.of(context).locale.languageCode == 'zh'
+                  ? '搜索所有笔记本'
+                  : 'Search all notebooks',
+            ),
+            value: _allNotebooks,
+            onChanged: (value) {
+              setState(() => _allNotebooks = value ?? false);
+              _queryChanged(_query.text);
+            },
+          ),
         if (_busy || _openingId != null) const LinearProgressIndicator(),
         if (_openError != null)
           Padding(

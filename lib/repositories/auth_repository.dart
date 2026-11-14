@@ -2139,7 +2139,13 @@ class AuthRepository {
     String accountId,
     String query, {
     int limit = 50,
-  }) => _database.searchNoteSummaries(accountId, query, limit: limit);
+    String? notebookId,
+  }) => _database.searchNoteSummaries(
+    accountId,
+    query,
+    limit: limit,
+    notebookId: notebookId,
+  );
 
   Future<Note?> searchableNote(String accountId, String noteId) =>
       _database.searchableNote(accountId, noteId);

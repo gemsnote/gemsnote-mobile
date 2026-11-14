@@ -908,6 +908,10 @@ class AppDatabase {
       }
       Cancellation.current?.check();
       await batch.commit(noResult: true);
+      await txn.rawUpdate(
+        "UPDATE notes SET notebook_server_id='' WHERE account_id=? AND is_trash=1 AND is_dirty=0 AND NOT EXISTS (SELECT 1 FROM notebooks WHERE notebooks.account_id=notes.account_id AND notebooks.server_id=notes.notebook_server_id)",
+        [account.cacheKey],
+      );
       Cancellation.current?.check();
     });
   }
@@ -1004,6 +1008,10 @@ class AppDatabase {
       );
       Cancellation.current?.check();
       await batch.commit(noResult: true);
+      await txn.rawUpdate(
+        "UPDATE notes SET notebook_server_id='' WHERE account_id=? AND is_trash=1 AND is_dirty=0 AND NOT EXISTS (SELECT 1 FROM notebooks WHERE notebooks.account_id=notes.account_id AND notebooks.server_id=notes.notebook_server_id)",
+        [account.cacheKey],
+      );
       Cancellation.current?.check();
     });
   }
@@ -1425,11 +1433,13 @@ class AppDatabase {
     String accountId,
     String query, {
     int limit = 50,
+    String? notebookId,
   }) async =>
       (await _searchRows(
             accountId,
             query,
             limit: limit,
+            notebookId: notebookId,
             columns: ['server_id', 'title', 'updated_time', 'is_markdown'],
           ))
           .map(
@@ -1457,6 +1467,7 @@ class AppDatabase {
     String accountId,
     String query, {
     required int limit,
+    String? notebookId,
     List<String>? columns,
   }) async {
     if (limit < 1) throw ArgumentError.value(limit, 'limit');
@@ -1468,9 +1479,11 @@ class AppDatabase {
     return raw.queryLargeValues(
       'notes',
       columns: columns,
-      where: '''account_id = ? AND is_trash = 0 AND local_is_deleted = 0
+      where:
+          '''account_id = ? AND is_trash = 0 AND local_is_deleted = 0
+        ${notebookId == null ? '' : 'AND notebook_server_id = ?'}
         AND (title LIKE ? ESCAPE '\\' OR content LIKE ? ESCAPE '\\')''',
-      whereArgs: [accountId, pattern, pattern],
+      whereArgs: [accountId, ?notebookId, pattern, pattern],
       orderBy: 'updated_time DESC, server_id',
       limit: limit,
     );

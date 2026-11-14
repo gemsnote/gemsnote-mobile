@@ -1353,9 +1353,8 @@ class _WorkspacePageState extends State<WorkspacePage>
           onToggleStar: () => _toggleStar(note),
           onMove: () => _moveNote(note),
           onCopy: () => _moveNote(note, copy: true),
-          onTrashToggle: () => note.isTrash
-              ? _saveMetadata(note.copyWith(isTrash: false))
-              : _trashNote(note),
+          onTrashToggle: () =>
+              note.isTrash ? _restoreTrashedNote(note) : _trashNote(note),
         ),
       ),
     );
@@ -1436,6 +1435,13 @@ class _WorkspacePageState extends State<WorkspacePage>
         builder: (_) => NoteSearchPage(
           repository: widget.repository,
           session: widget.session,
+          notebookId:
+              _showingAll ||
+                  _showingStarred ||
+                  _showingTrash ||
+                  _selectedTag != null
+              ? null
+              : _selectedNotebook?.notebookId,
         ),
       ),
     );
@@ -1495,6 +1501,20 @@ class _WorkspacePageState extends State<WorkspacePage>
   Future<void> _toggleStar(Note note) =>
       _saveMetadata(note.copyWith(isStarred: !note.isStarred));
 
+  Future<void> _restoreTrashedNote(Note note) async {
+    final books = await widget.repository.notebooks(
+      widget.session.account.cacheKey,
+    );
+    if (!mounted) return;
+    if (!books.any(
+      (book) => book.notebookId == note.notebookId && !book.isDeleted,
+    )) {
+      await _moveNote(note);
+    } else {
+      await _saveMetadata(note.copyWith(isTrash: false));
+    }
+  }
+
   Future<bool> _moveNote(Note note, {bool copy = false}) async {
     try {
       final notebooks = await widget.repository.notebooks(
@@ -1545,7 +1565,9 @@ class _WorkspacePageState extends State<WorkspacePage>
         return true;
       }
       if (selected != null && selected != note.notebookId) {
-        await _saveMetadata(note.copyWith(notebookId: selected));
+        await _saveMetadata(
+          note.copyWith(notebookId: selected, isTrash: false),
+        );
         return true;
       }
       return false;
